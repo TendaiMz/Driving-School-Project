@@ -1,0 +1,975 @@
+﻿<UserControl x:Class="PointOfSale.NewSaler"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xtck="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:my="clr-namespace:WpfScheduler;assembly=WpfScheduler"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="900" Loaded="UserControl_Loaded">
+    <Grid Name="grdMain">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height=".9*"/>
+            <RowDefinition Height=".5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid HorizontalAlignment="Left" Name="grdPrint" Width="281" Height="300" Margin="0,58,0,57">
+            <!--<Viewbox Name="vbxPrint" Margin="0,0,-20,0" />-->
+            <Label Name="dcView">
+
+            </Label>
+        </Grid>
+
+        <GroupBox Name="grpSalesDetail" Background="GhostWhite"   Header="Sale Details" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="200,10,200,10">
+            <Grid Name="grdSale" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".1*"/>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width=".1"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="2" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--<Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Content="Invoice Number"  />-->
+                    <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Content="Date"   />
+                    <!--<Label Name="lblInvoiceNum" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"  />-->
+                    <DatePicker Name="dtpDate" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" IsEnabled="False"  />
+
+                </Grid>
+                <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Content="Customer Name"  />
+                <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Content="Item Description" />
+                <Label Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Content="Quantity"/>
+                <!--<Label Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Content="Unit" />-->
+                <Label Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Content="Price"/>
+                <Label Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Content="Cost"/>
+                <Label Grid.Column="1" Grid.Row="8" VerticalAlignment="Center"  Content="Choose Instructor"/>
+                <Label  Name="lblIsAnySales" Grid.Column="1" Grid.Row="7" Visibility="Collapsed" />
+                
+                <WrapPanel Grid.Column="2" Grid.Row="1" Margin="5" >
+                    <xtck:WatermarkComboBox Name="cmbCustomer" Width="250"  IsEditable="True" DisplayMemberPath="FullName" SelectedValuePath="ID"  Watermark="Enter the customer name"  />
+                    <Button Margin="10,0,0,0" Name="btnNewCustomer" Width="100" Height="20" Content="New" Click="btnNewCustomer_Click"/>
+
+                </WrapPanel>
+                <xtck:WatermarkComboBox Name="cmbDescription" Margin="5" Grid.Column="2" Grid.Row="2" Watermark="Select the item description" IsEditable="True" SelectedValuePath="ID" DisplayMemberPath="Name" SelectionChanged="txtDescription_SelectionChanged"  />
+                <xtck:IntegerUpDown Name="txtQuantity" Margin="5" Grid.Column="2" Grid.Row="5" Watermark="Enter the item quantity" ShowButtonSpinner="False" GotFocus="txtQuantity_GotFocus" TextInput="txtQuantity_TextInput" KeyUp="txtQuantity_KeyUp"  />
+                <!--<xtck:WatermarkComboBox Name="cmbUnit" Margin="5" Grid.Column="2" Grid.Row="4" IsEditable="True" DisplayMemberPath="Name"  SelectedValuePath="ID" Watermark="Select the item units" />-->
+                <xtck:DecimalUpDown Name="txtAmount" Margin="5" Grid.Column="2" Grid.Row="3" IsEnabled="False"  AllowSpin="False"  ShowButtonSpinner="False" Watermark="Item Price" FormatString="C2" Maximum="9999999.00" Minimum="0.05" Value="0.00" UpdateValueOnEnterKey="True" Increment=".01" KeyUp="txtAmount_KeyUp" />
+                <xtck:DecimalUpDown Name="txtCost" Margin="5" Grid.Column="2" Grid.Row="6"  AllowSpin="False"  IsEnabled="False" IsReadOnly="True"  ShowButtonSpinner="False" Watermark="Total Cost" FormatString="C2" Maximum="9999999.00" Minimum="0.05" Value="0.00" UpdateValueOnEnterKey="True" Increment=".01" />
+                <WrapPanel Grid.Row="7" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,0">
+                    <Button Margin="10,0,0,0" Name="btnADD" Width="80" Height="30" Content="ADD ++" Click="btnADD_Click"/>
+                    <Button Margin="10,0,0,0" Name="btnRemove" Width="80" Height="30" Content="Remove--" Click="btnRemove_Click"/>
+                </WrapPanel>
+                <xtck:WatermarkComboBox Name="cmbInstructor" Grid.Column="2" Grid.Row="8" Margin="5"  DisplayMemberPath="FullName" SelectedValuePath="ID" IsEditable="True"  Watermark="Choose Instructor" SelectionChanged="cmbInstructor_SelectionChanged">
+                    <xtck:WatermarkComboBox.Style>
+                        <Style TargetType="xtck:WatermarkComboBox">
+                            <Setter Property="IsEnabled" Value="False"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=lblIsAnySales,Path=Content}" Value="True">
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </xtck:WatermarkComboBox.Style>
+                </xtck:WatermarkComboBox>
+                   
+
+            </Grid>
+        </GroupBox>
+     
+        <Popup Name="popNewCustomer" IsOpen="False" StaysOpen="False" Width="800" Height="450" AllowsTransparency="True" PopupAnimation="Slide" PlacementTarget="{Binding ElementName=btnNewCustomer}" Placement="Bottom" >
+            <Border Background="LightSkyBlue">
+                <Grid Margin="10" Name="grdNewCustomer" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".2*"/>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width=".2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Content="NEW CUSTOMER" FontSize="18" FontStyle="Oblique" FontWeight="UltraBold" Foreground="Blue" Grid.ColumnSpan="2" />
+                        <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Content="Name" />
+                        <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Content="Surname" />
+                        <Label Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Content="Date Of Birth" />
+                        <Label Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Content="ID Number" />
+                        <Label Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Content="Contact Number 1" />
+                        <Label Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Content="Contact Number 2"/>
+                        <Label Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" Content="Address" />
+                        <Label Grid.Column="3" Grid.Row="1" VerticalAlignment="Center"  Content="Email" />
+                        <Label Grid.Column="3" Grid.Row="2" VerticalAlignment="Center"  Content="PDL Number"/>
+                        <Label Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" Content="Valid"/>
+                        <Label Grid.Column="3" Grid.Row="4" VerticalAlignment="Center"  Content="Expiry Date"/>
+                        <Label Grid.Column="3" Grid.Row="5" VerticalAlignment="Center"  Content="Next Of Kin"/>
+                        <Label Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" >
+                            <TextBlock>Next Of Kin <LineBreak/>Contact Number</TextBlock>
+                        </Label>
+
+                        <TextBox Name="txtCustName" Margin="5,10,5,10" Grid.Column="2" Grid.Row="1"   />
+                        <TextBox Name="txtCustSurname" Margin="5,10,5,10" Grid.Column="2" Grid.Row="2"  />
+                        <DatePicker Name="dtpCustDOB" Margin="5,10,5,10" Grid.Column="2" Grid.Row="3" />
+                        <TextBox Name="txtCustId" Margin="5,10,5,10" Grid.Column="2" Grid.Row="4"  />
+                        <xtck:MaskedTextBox Name="txtContact1" Margin="5,10,5,10" Grid.Column="2" Grid.Row="5"  Mask="0000-000-000" />
+                        <xtck:MaskedTextBox Name="txtContact2" Margin="5,10,5,10" Grid.Column="2" Grid.Row="6"   Mask="0000-000-000" />
+                        <TextBox Name="txtAdress" Margin="5,10,5,10" Grid.Column="2" Grid.Row="7" TextWrapping="Wrap" />
+                        <TextBox Name="txtEmail" Margin="5,10,5,10" Grid.Column="4" Grid.Row="1" TextChanged="txtEmail_TextChanged"/>
+                        <TextBox Name="txtPDLNum" Margin="5,10,5,10" Grid.Column="4" Grid.Row="2"  />
+                        <DatePicker Name="dtpValid" Margin="5,10,5,10" Grid.Column="4" Grid.Row="3"  />
+                        <DatePicker Name="dtpExipry" Margin="5,10,5,10" Grid.Column="4" Grid.Row="4"  />
+                        <TextBox Name="txtNextOfKin" Margin="5,10,5,10" Grid.Column="4" Grid.Row="5"  />
+                        <xtck:MaskedTextBox Name="txtNextOfKinContact" Margin="5,10,5,10" Grid.Column="4" Grid.Row="6"  Mask="0000-000-000" />
+                        <Button Name="btnSaveCustomer" Margin="0,0,10,0" Grid.Column="4" Grid.Row="8" HorizontalAlignment="Right" Height="35" Width="90" Content="Save" Click="btnSaveCustomer_Click"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Popup>
+
+        <Popup Name="popSchedule" IsOpen="False" StaysOpen="True" Placement="Center" PlacementTarget="{Binding ElementName=dtgSchedule}" Height="550" Width="1200">
+            <Border BorderBrush="Beige" BorderThickness="4" CornerRadius="5" Padding="10" Background="SkyBlue">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".35*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition  Height="4*"/>
+                        <RowDefinition  Height="4*"/>
+                        <RowDefinition  Height="4*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="CREATE SCHEDULE"  Grid.ColumnSpan="3"/>
+                    <Button Name="popScheduleClose" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top"  Height="20" Width="20" Margin="10,0,0,0" BorderThickness="0" Click="popScheduleClose_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Red"/>
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Image Name="imgClose" Stretch="UniformToFill" >
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Source" Value="..\Icons\delete.png" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source" Value="..\Icons\delete_001.png"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </Button>
+
+                    <WrapPanel Grid.Column="0" Grid.Row="1" Margin="10,5,0,0">
+                        <!--<Label VerticalAlignment="Center" Margin="10,0,10,0" Content="Start Date"/>
+                        <DatePicker Name="dtpScheduleStartDate" Margin="10,0,0,0" Width="100" />-->
+                        <TextBox Name="txtLess"/>
+                    </WrapPanel>
+
+                    <GroupBox Grid.Column="0" Grid.Row="2"  Margin="5" Header="Morning" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ListBox Name="lstMorn" Grid.Row="0" DisplayMemberPath="TimeSlot" SelectedValuePath="ID" BorderThickness="0" SelectionChanged="lstMorn_SelectionChanged"/>
+                        </Grid>
+
+                    </GroupBox>
+                    <GroupBox Grid.Column="0" Grid.Row="3" Header="Afternoon" Margin="5" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ListBox Name="lstAftrn" Grid.Row="0" DisplayMemberPath="TimeSlot" SelectedValuePath="ID" BorderThickness="0" SelectionChanged="lstAftrn_SelectionChanged"/>
+                        </Grid>
+
+                    </GroupBox>
+                    <GroupBox Grid.Column="0" Grid.Row="4" Header="Evening" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ListBox Name="lstEven" Grid.Row="0" DisplayMemberPath="TimeSlot" SelectedValuePath="ID" BorderThickness="0" SelectionChanged="lstEven_SelectionChanged"/>
+                        </Grid>
+
+                    </GroupBox>
+
+                    <GroupBox Grid.Column="1" Grid.Row="2"  Margin="5" Header="Available Dates" >
+                        <ListBox Name="lstMorning"  BorderThickness="0"
+                            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                 AllowDrop="True"
+                              PreviewMouseLeftButtonDown="lstMorning_PreviewMouseLeftButtonDown"
+                               Drop="lstSelectedMorning_Drop">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                        <StackPanel Width="200">
+                                            <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                            <TextBlock Text="{Binding Path=Time}"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </GroupBox>
+
+                    <GroupBox Grid.Column="1" Grid.Row="3"  Margin="5" Header="Available Dates" >
+                        <ListBox Name="lstAfternoon"  BorderThickness="0"
+                           ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                 AllowDrop="True"
+                              PreviewMouseLeftButtonDown="lstMorning_PreviewMouseLeftButtonDown"
+                               Drop="lstSelectedMorning_Drop">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                        <StackPanel Width="200">
+                                            <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                            <TextBlock Text="{Binding Path=Time}"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </GroupBox>
+
+                    <GroupBox Grid.Column="1" Grid.Row="4"  Margin="5" Header="Available Dates" >
+                        <ListBox Name="lstEvening"  BorderThickness="0"
+                            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                             AllowDrop="True"
+                              PreviewMouseLeftButtonDown="lstMorning_PreviewMouseLeftButtonDown"
+                               Drop="lstSelectedMorning_Drop">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                        <StackPanel Width="200">
+                                            <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                            <TextBlock Text="{Binding Path=Time}"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </GroupBox>
+
+
+
+                    <GroupBox  Margin="5" Grid.Column="2" Grid.Row="2" Header="Selected Dates">
+                        <ListBox Name="lstSelectedMorning"  BorderThickness="0" 
+                            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                 AllowDrop="True"
+                              PreviewMouseLeftButtonDown="lstMorning_PreviewMouseLeftButtonDown"
+                               Drop="lstSelectedMorning_Drop">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                        <StackPanel Width="200">
+                                            <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                            <TextBlock Text="{Binding Path=Time}"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+
+
+
+                        </ListBox>
+                    </GroupBox>
+
+
+                    <GroupBox  Margin="5" Grid.Column="2" Grid.Row="3" Header="Selected Dates">
+
+                        <ListBox Name="lstSelectedAfternoon" BorderThickness="0"
+                            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                 AllowDrop="True"
+                              PreviewMouseLeftButtonDown="lstSelectedAfternoon_PreviewMouseLeftButtonDown"
+                               Drop="lstSelectedAfternoon_Drop">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                        <StackPanel Width="200">
+                                            <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                            <TextBlock Text="{Binding Path=Time}"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </GroupBox>
+
+
+                    <GroupBox  Margin="5" Grid.Column="2" Grid.Row="4" Header="Selected Dates">
+
+
+                        <ListBox Name="lstSelectedEvening"  BorderThickness="0"
+                            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                 AllowDrop="True"
+                              PreviewMouseLeftButtonDown="lstSelectedEvening_PreviewMouseLeftButtonDown"
+                               Drop="lstSelectedEvening_Drop">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                        <StackPanel Width="200">
+                                            <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                            <TextBlock Text="{Binding Path=Time}"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                    </GroupBox>
+                    <Button  Name="btnSaveSchedule" Grid.Column="2" Grid.Row="5" Margin="0,0,10,0" HorizontalAlignment="Right" Content="SAVE" Width="100" Height="35" Click="btnSaveSchedule_Click"/>
+
+                </Grid>
+            </Border>
+        </Popup>
+
+        <WrapPanel Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Grid.Column="1">
+        </WrapPanel>
+
+        <DataGrid Margin="10" Name="dtgSales" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width=".5*" Header="Date" Binding="{Binding Date,StringFormat={}{0:D}}"/>
+                <DataGridTextColumn Width="*" Header="Customer Name" Binding="{Binding CustomerName}"/>
+                <DataGridTextColumn Width="*" Header="Description" Binding="{Binding Description }"/>
+                <DataGridTextColumn Width=".25*" Header="Quantity" Binding="{Binding Quantity}"/>
+               <DataGridTextColumn Width=".5*" Header="Price" Binding="{Binding Amount}"/>
+                <DataGridTextColumn Width=".5*" Header="Cost" Binding="{Binding Cost}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+   
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="12*"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="0,3">Amount Paid</Label>
+                <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">Total</Label>
+                <Label Grid.Column="3" Grid.Row="2" VerticalAlignment="Center">Change</Label>
+               
+                <xtck:DecimalUpDown Grid.Column="2" Grid.Row="1" Margin="10,0,10,2" Width="100" Name="txtPaid" AllowSpin="False"  FormatString="C2" ShowButtonSpinner="False" GotFocus="txtPaid_GotFocus"  TextInput="txtPaid_TextInput" KeyUp="txtPaid_KeyUp" DefaultValue="0.00" UpdateValueOnEnterKey="True" ValueChanged="txtPaid_ValueChanged" DisplayDefaultValueOnEmptyText="True" />
+                <xtck:DecimalUpDown Grid.Column="2" Grid.Row="2" Margin="10,2,10,0" Width="100" Name="txtTotal" IsEnabled="False" FormatString="C2" AllowSpin="False" ShowButtonSpinner="False"  />
+                <xtck:DecimalUpDown  Grid.Column="4" Grid.Row="2" Margin="10,0,10,0" Width="100" Name="txtChange"  IsEnabled="False" FormatString="C2" AllowSpin="False" ShowButtonSpinner="False" Value="0.00" Minimum="-999999.99" Watermark="Owing" UpdateValueOnEnterKey="True"/>
+                <xtck:DecimalUpDown  Margin="10,0,10,2" Width="100" Name="txtPaid1" Grid.Column="2" Grid.Row="1" Visibility="Hidden" GotFocus="txtChange1_GotFocus" FormatString="C2" Value="0.00" ShowButtonSpinner="False"   Text="{Binding   ElementName=txtPaid, Path=Text}" ValueChanged="txtPaid1_ValueChanged"/>
+                <xtck:DecimalUpDown  Margin="10,0,10,2" Width="100" Name="txtPaid2" Grid.Column="2" Grid.Row="1" Visibility="Hidden" GotFocus="txtChange1_GotFocus" FormatString="C2"   Value="{Binding   ElementName=txtPaid, Path=Text}" ValueChanged="txtPaid1_ValueChanged"/>
+
+                <TextBox Grid.Column="0" Grid.Row="2" Margin="10,0,10,2" Width="100" Name="txtDscount" IsEnabled="False" Text="0%" />
+
+                <Button Grid.Column="0"  Grid.Row="1" Margin="0,0,0,0" Name="btnDiscount" Width="100" Height="30" Content="Discount" Click="btnDiscount_Click"/>
+                <Button Grid.Column="4" Grid.Row="1" Margin="10,0,10,0" VerticalAlignment="Center"   Name="btnSave" Width="100" Height="30" Content="Save &amp; Print" Click="btnSave_Click" Grid.ColumnSpan="2" />
+
+            </Grid>
+        </StackPanel>
+
+        <Popup Name="popDiscount" IsOpen="False" StaysOpen="False" Width="300" Height="200" AllowsTransparency="True" PopupAnimation="Slide" PlacementTarget="{Binding ElementName=btnDiscount}" Placement="Top" >
+            <Border Background="LightSkyBlue">
+                <Grid Margin="10" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width=".75*"/>
+                            
+                           
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Content="ADD DISCOUNT" FontSize="18" FontStyle="Normal" FontWeight="Normal" Foreground="Black" Grid.ColumnSpan="4" />
+                        <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Content="Discount Amount" />
+                        <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Content="Supervisor" />
+                        <Label Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Content="Password" />
+
+
+                        <xtck:DecimalUpDown Name="txtDiscountAmount" Grid.Column="2" Grid.Row="1" Margin="5"   AllowSpin="False"  FormatString="C2" ShowButtonSpinner="False"   Value="0.00" UpdateValueOnEnterKey="True"  GotFocus="txtDiscountAmount_GotFocus"/>
+                        <PasswordBox Name="pbxPassword" Margin="5" Grid.Column="2" Grid.Row="3"  />
+                        <ComboBox Name="cmbSupervisor" Margin="5" Grid.Column="2" Grid.Row="2"  SelectedValuePath="ID" DisplayMemberPath="FullName" />
+
+                        <Button Name="btnSaveDiscount" Grid.Row="4" Margin="0,0,10,0" Grid.Column="2" HorizontalAlignment="Right" Height="25" Width="65" Content="Submit" Click="btnSaveDiscount_Click"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Popup>
+      
+        <!--Schedule lessons only-->     
+        <xtck:WindowContainer Grid.Column="0" Grid.RowSpan="9" Grid.ColumnSpan="4">
+            <xtck:ChildWindow Caption="Create Schedule" Name="wndScheduler" Height="580" Width="1200" WindowBackground="Blue" BorderBrush="White" 
+                  WindowStartupLocation="Center" CloseButtonVisibility="Collapsed">
+                <Border Background="Blue">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>                      
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>  
+                    </Grid.RowDefinitions>
+                    <xtck:Wizard x:Name="wzdSchedule" FinishButtonClosesWindow="False" Finish="wzdSchedule_Finish"  CancelButtonClosesWindow="False" Cancel="wzdSchedule_Cancel" Next="wzdSchedule_Next" HelpButtonVisibility="Collapsed">
+                            <xtck:WizardPage x:Name="IntroPage" 
+                                   Title="Welcome to Scheduler Wizard"
+                                   Description="This Wizard will walk you though how to create the customer schedule." >
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width=".25*" />
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Margin="5,0,0,0" Grid.Column="0" Grid.Row="0" Name="lblLesson2" VerticalAlignment="Center" Content="Remaining"/>
+
+                                    <GroupBox Grid.Column="0" Grid.Row="1" Margin="5" Header="Available Dates" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="14*"/>
+                                            </Grid.RowDefinitions>
+                                            <ComboBox Grid.Row="0" Name="cmbTimes4"  DisplayMemberPath="TimeSlot" SelectedValuePath="ID"  SelectionChanged="cmbTimes4_SelectionChanged"/>
+
+                                            <ListBox Grid.Row="1" Name="lstTimeSlots4"  BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="Multiple" >
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapPanel/>
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                                            <StackPanel Width="175">
+                                                                <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                                                <TextBlock Text="{Binding Path=Time}"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </Grid>
+                                    </GroupBox>
+                                    
+                                    <Border Grid.Column="1" Grid.Row="1" BorderBrush="Beige" BorderThickness="3">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="4*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <StackPanel Grid.Row="1">
+                                                <Button Name="btnWzdSchedAdd4"  Content=">>" Margin="5" Height="30" Click="btnWzdSchedAdd4_Click" />
+                                                <Button Name="btnWzdSchedRem4"  Content="&lt;&lt;" Margin="5" Height="30" Click="btnWzdSchedRem4_Click"/>
+                                            </StackPanel>
+                                        </Grid>
+
+                                    </Border>
+
+                                    <GroupBox Grid.Column="2" Grid.Row="1" Margin="5" Header="Selected Dates" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="14*"/>
+                                            </Grid.RowDefinitions>
+                                            <ListBox Grid.Row="1" Name="lstSelectedTimeSlots4"  BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapPanel/>
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                                            <StackPanel Width="175">
+                                                                <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                                                <TextBlock Text="{Binding Path=Time}"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </Grid>
+                                    </GroupBox>
+
+                                </Grid>
+                            </xtck:WizardPage>
+                             <xtck:WizardPage x:Name="LastPage" PageType="Interior"
+                                   Title="Confimation"
+                                   Description="Click Finish if your schedule is correct"
+                                   CanFinish="True" Loaded="LastPage_Loaded">
+                                <Grid>
+                                    <DataGrid Name="dtgLessonSchedule"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" >
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Width="200" Header="Date" Binding="{Binding Date,StringFormat={}{0:d}}"/>
+                                            <DataGridTextColumn Width="200" Header="Time" Binding="{Binding Time}"/>
+                                            <DataGridTextColumn Width="200">
+                                                <DataGridTextColumn.ElementStyle>
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="TextBlock.Text" Value="Lesson"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding BookingTpye}" Value="1">
+                                                                <Setter Property="TextBlock.Text" Value="RoadTest"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </DataGridTextColumn.ElementStyle>
+                                            </DataGridTextColumn>
+                                            <DataGridTextColumn Width="*" Header="Notes"/>
+                                        </DataGrid.Columns>
+
+                                    </DataGrid>
+
+                                </Grid>
+
+                            </xtck:WizardPage>
+                    </xtck:Wizard>
+
+                </Grid>
+                </Border>
+            </xtck:ChildWindow>
+        </xtck:WindowContainer>
+        <!--Schedule Lessons and road test -->
+        <xtck:WindowContainer Grid.Column="0" Grid.RowSpan="9" Grid.ColumnSpan="4">
+            <xtck:ChildWindow Caption="Create Schedule" Name="wndScheduler1" Height="580" Width="1200" WindowBackground="Blue" BorderBrush="White" 
+                  WindowStartupLocation="Center" CloseButtonVisibility="Collapsed">
+                <Border Background="Blue">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+
+                        </Grid.RowDefinitions>
+                        <xtck:Wizard x:Name="wzdSchedule1" FinishButtonClosesWindow="False" Finish="wzdSchedule1_Finish" CancelButtonClosesWindow="False" Next="wzdSchedule1_Next" Cancel="wzdSchedule1_Cancel" HelpButtonVisibility="Collapsed">
+                            <xtck:WizardPage x:Name="IntroPage1" 
+                                   Title="Schedule  Lessons"
+                                   Description="This Wizard will walk you though how to create the customer schedule.">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width=".25*" />
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Margin="5,0,0,0" Grid.Column="0" Grid.Row="0" Name="lblLesson" VerticalAlignment="Center" Content="Remaining"/>
+
+                                    <GroupBox Grid.Column="0" Grid.Row="1" Margin="5" Header="Available Dates" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="14*"/>
+                                            </Grid.RowDefinitions>
+                                            <ComboBox Grid.Row="0" Name="cmbTimes3"  DisplayMemberPath="TimeSlot" SelectedValuePath="ID"  SelectionChanged="cmbTimes3_SelectionChanged"/>
+
+                                            <ListBox Grid.Row="1" Name="lstTimeSlots3"  BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="Multiple" >
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapPanel/>
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                                            <StackPanel Width="175">
+                                                                <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                                                <TextBlock Text="{Binding Path=Time}"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </Grid>
+                                    </GroupBox>
+                                    
+                                    <Border Grid.Column="1" Grid.Row="1" BorderBrush="Beige" BorderThickness="3">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="4*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <StackPanel Grid.Row="1">
+                                                <Button Name="btnWzdSchedAdd3"  Content=">>" Margin="5" Height="30" Click="btnWzdSchedAdd3_Click" />
+                                                <Button Name="btnWzdSchedRem3"  Content="&lt;&lt;" Margin="5" Height="30" Click="btnWzdSchedRem3_Click"/>
+                                            </StackPanel>
+                                        </Grid>
+
+                                    </Border>
+
+                                    <GroupBox Grid.Column="2" Grid.Row="1" Margin="5" Header="Selected Dates" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="14*"/>
+                                            </Grid.RowDefinitions>
+                                            <ListBox Grid.Row="1" Name="lstSelectedTimeSlots3"  BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapPanel/>
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                                            <StackPanel Width="175">
+                                                                <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                                                <TextBlock Text="{Binding Path=Time}"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </Grid>
+                                    </GroupBox>
+
+                                </Grid>
+
+                            </xtck:WizardPage>
+
+                            <xtck:WizardPage x:Name="ScheduleRoadTest" PageType="Interior"
+                                   Title="Schedule A Road Test">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width=".25*" />
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Margin="5,0,0,0" Grid.Column="0" Grid.Row="0" Name="lblRoadTest" VerticalAlignment="Center" Content="Remaining"/>
+                                    <GroupBox Grid.Column="0" Grid.Row="1" Margin="5" Header="Available Dates" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="14*"/>
+                                            </Grid.RowDefinitions>
+                                            <ComboBox Grid.Row="0" Name="cmbTimes2"  DisplayMemberPath="Time" SelectedValuePath="ID"  SelectionChanged="cmbTimes2_SelectionChanged"/>
+
+                                            <ListBox Grid.Row="1" Name="lstTimeSlots2"  BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="Multiple" >
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapPanel/>
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                                            <StackPanel Width="200">
+                                                                <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                                                <TextBlock Text="{Binding Path=HourTime}"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </Grid>
+                                    </GroupBox>
+                                    
+                                    <Border Grid.Column="1" Grid.Row="1" BorderBrush="Beige" BorderThickness="3">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="4*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <StackPanel Grid.Row="1">
+                                                <Button Name="btnWzdSchedAdd2"  Content=">>" Margin="5" Height="30" Click="btnWzdSchedAdd2_Click" />
+                                                <Button Name="btnWzdSchedRem2"  Content="&lt;&lt;" Margin="5" Height="30" Click="btnWzdSchedRem2_Click"/>
+                                            </StackPanel>
+                                        </Grid>
+
+                                    </Border>
+
+                                    <GroupBox Grid.Column="2" Grid.Row="1" Margin="5" Header="Selected Dates" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="14*"/>
+                                            </Grid.RowDefinitions>
+                                            <ListBox Grid.Row="1" Name="lstSelectedTimeSlots2"  BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapPanel/>
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                                            <StackPanel Width="200">
+                                                                <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                                                <TextBlock Text="{Binding Path=Time}"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </Grid>
+                                    </GroupBox>
+
+                                </Grid>
+                            </xtck:WizardPage>
+
+                            <xtck:WizardPage x:Name="LastPage1" PageType="Interior" Title="Confimation" Description="Click Finish if your schedule is correct" CanFinish="True" Loaded="LastPage1_Loaded">
+                                <Grid>
+                                    <DataGrid Name="dtgFullSchedule"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" >
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Width="200" Header="Date" Binding="{Binding Date,StringFormat={}{0:d}}"/>
+                                            <DataGridTextColumn Width="200" Header="Time" Binding="{Binding Time}"/>
+                                            <DataGridTextColumn Width="200">
+                                                <DataGridTextColumn.ElementStyle>
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="TextBlock.Text" Value="Lesson"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding BookingTpye}" Value="1">
+                                                                <Setter Property="TextBlock.Text" Value="RoadTest"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </DataGridTextColumn.ElementStyle>
+                                            </DataGridTextColumn>
+                                            <DataGridTextColumn Width="*" Header="Notes"/>
+                                        </DataGrid.Columns>
+
+                                    </DataGrid>
+
+                                </Grid>
+
+                            </xtck:WizardPage>
+                        </xtck:Wizard>
+
+                    </Grid>
+                </Border>
+            </xtck:ChildWindow>
+
+        </xtck:WindowContainer>
+        <!--Schedule road test only-->
+        <xtck:WindowContainer Grid.Column="0" Grid.RowSpan="9" Grid.ColumnSpan="4">
+            <xtck:ChildWindow Caption="Create Schedule" Name="wndScheduler2" Height="580" Width="1200" WindowBackground="Blue" BorderBrush="White" 
+                  WindowStartupLocation="Center" CloseButtonVisibility="Collapsed">
+                <Border Background="Blue">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <xtck:Wizard x:Name="wzdSchedule2" FinishButtonClosesWindow="False" Finish="wzdSchedule2_Finish" CancelButtonClosesWindow="False" Next="wzdSchedule2_Next" Cancel="wzdSchedule2_Cancel" HelpButtonVisibility="Collapsed">
+                            
+                            <xtck:WizardPage x:Name="Page5" PageType="Interior"
+                                   Title="Schedule A Road Test">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width=".25*" />
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="*"/>                                                                            
+                                    </Grid.RowDefinitions>
+                                    <Label Margin="5,0,0,0" Grid.Column="0" Grid.Row="0" Name="lblRoadTest2" VerticalAlignment="Center" Content="Remaining"/>
+                                    <GroupBox Grid.Column="0" Grid.Row="1" Margin="5" Header="Available Dates" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>                                                    
+                                                <RowDefinition Height="14*"/>
+                                            </Grid.RowDefinitions>
+                                            <ComboBox Grid.Row="0" Name="cmbTimes"  DisplayMemberPath="Time" SelectedValuePath="ID"  SelectionChanged="cmbTimes_SelectionChanged"/>
+
+                                            <ListBox Grid.Row="1" Name="lstTimeSlots1"  BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="Multiple" >
+                                            <ListBox.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <WrapPanel/>
+                                                </ItemsPanelTemplate>
+                                            </ListBox.ItemsPanel>
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                                        <StackPanel Width="175">
+                                                            <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                                            <TextBlock Text="{Binding Path=HourTime}"/>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListBox>
+                                        </Grid>
+                                    </GroupBox>
+                                    <Border Grid.Column="1" Grid.Row="1" BorderBrush="Beige" BorderThickness="3">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="4*"/>
+                                            </Grid.RowDefinitions>
+                                            
+                                            <StackPanel Grid.Row="1">
+                                                <Button Name="btnWzdSchedAdd1"  Content=">>" Margin="5" Height="30" Click="btnWzdSchedAdd1_Click" />
+                                                <Button Name="btnWzdSchedRem1"  Content="&lt;&lt;" Margin="5" Height="30" Click="btnWzdSchedRem1_Click"/>
+                                            </StackPanel>
+                                        </Grid>
+                                       
+                                    </Border>
+
+                                    <GroupBox Grid.Column="2" Grid.Row="1" Margin="5" Header="Selected Dates" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="14*"/>
+                                            </Grid.RowDefinitions>
+                                            <ListBox Grid.Row="1" Name="lstSelectedTimeSlots1"  BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapPanel/>
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="3" Padding="5" Background="Azure">
+                                                            <StackPanel Width="175">
+                                                                <TextBlock Text="{Binding Path=Date,StringFormat={}{0:D}}"/>
+                                                                <TextBlock Text="{Binding Path=Time}"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </Grid>
+                                    </GroupBox>
+
+                                </Grid>
+                            </xtck:WizardPage>
+                            
+                            <xtck:WizardPage x:Name="LastPage3" PageType="Interior"
+                                   Title="Confimation" Description="Click Finish if your schedule is correct"   CanFinish="True" Loaded="LastPage3_Loaded">
+                                <Grid>
+                                 <DataGrid Name="dtgRoadTest"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" >
+                                         <DataGrid.Columns>                                            
+                                            <DataGridTextColumn Width="200" Header="Date" Binding="{Binding Date,StringFormat={}{0:d}}"/>
+                                            <DataGridTextColumn x:Name="txtTest" Width="200" Header="Time" Binding="{Binding HourTime}"/>                                         
+                                            <DataGridTextColumn Width="200">
+                                                <DataGridTextColumn.ElementStyle>
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="TextBlock.Text" Value="Lesson"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding BookingTpye}" Value="1">
+                                                                <Setter Property="TextBlock.Text" Value="RoadTest"/>
+                                                            </DataTrigger>
+                                                            
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </DataGridTextColumn.ElementStyle>
+                                            </DataGridTextColumn>
+                                            <DataGridTextColumn Width="*" Header="Notes"/>
+                                        </DataGrid.Columns>
+                                        
+                                    </DataGrid>
+                                </Grid>
+                            </xtck:WizardPage>
+                            
+                        </xtck:Wizard>
+
+                    </Grid>
+                </Border>
+            </xtck:ChildWindow>
+
+        </xtck:WindowContainer>
+
+    </Grid>
+</UserControl>

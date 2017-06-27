@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="PointOfSale.MaintenanceCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="300*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="10" Grid.Row="0" Background="GhostWhite">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Maintenance" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="6" FontWeight="Bold" FontSize="18" />
+            <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Content="Car Registration Number" />
+            <Label Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Content="Instructor" />
+            <Label Grid.Column="4" Grid.Row="1" VerticalAlignment="Center" Content="Maintenance Type" />
+            <Label Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" Content="Description" />
+            <Label Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" Content="Date" />
+            <Label Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Content="Amount Paid" />
+            <Label Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" Content="Invoice Number"/>
+            <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Content="Notes" />
+
+            <ComboBox  Name="cmbCarReg" Grid.Column="1" Grid.Row="1" MaxHeight="25"  Margin="10" IsEditable="True" SelectedValuePath="ID" DisplayMemberPath="VehicleRegistration" />
+            <ComboBox Name="cmbInstructor"  Grid.Column="1" Grid.Row="2" MaxHeight="25" Margin="10" SelectedValuePath="ID" DisplayMemberPath="FullName" />
+            <TextBox  Name="txtNotes" Grid.Column="1"  Grid.Row="3" Grid.RowSpan="2" MaxHeight="75"  Margin="10" />
+            <ComboBox Name="cmbType" Grid.Column="5" Grid.Row="1" MaxHeight="25" Margin="10" SelectedValuePath="ID" DisplayMemberPath="Name" />
+            <DatePicker Name="dtpDate" Grid.Column="3" Grid.Row="1" MaxHeight="25" Margin="10" />
+            <TextBox Name="txtAmount" Grid.Column="3" Grid.Row="2" MaxHeight="25" Margin="10" />
+            <TextBox Name="txtDescription" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="3" MaxHeight="25" Margin="10" />
+            <TextBox Name="txtInvoice" Grid.Column="5" Grid.Row="2" MaxHeight="25"  Margin="10" />
+            <Button Name="btnSave" Grid.Column="5" Grid.Row="5" Content="Save" HorizontalAlignment="Right" Margin="5,5" Width="85"  Height="25" Click="btnSave_Click"/>
+        </Grid>
+        <DataGrid Grid.Row="1" Name="dtgMaintenance"  AutoGenerateColumns="False" BorderThickness="0" GridLinesVisibility="Horizontal" IsReadOnly="False" CanUserAddRows="False"
+                  HorizontalGridLinesBrush="SkyBlue" RowBackground="GhostWhite" Background="GhostWhite" CellEditEnding="dtgMaintenance_CellEditEnding"
+                  CurrentCellChanged="dtgMaintenance_CurrentCellChanged">
+            <DataGrid.Columns>
+                <DataGridComboBoxColumn x:Name="cmbCarReg1" Header="Car Reg" Width=".35*" SelectedValueBinding="{Binding CarID,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID" DisplayMemberPath="VehicleRegistration"/>
+                <DataGridComboBoxColumn x:Name="cmbInstructor1" Header="Instructor" Width=".45*" SelectedValueBinding="{Binding InstructorID,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID" DisplayMemberPath="FullName" />
+                <DataGridComboBoxColumn x:Name="cmbType1" Header="Maintenance Type" Width=".35*" SelectedValueBinding="{Binding TypeID,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID" DisplayMemberPath="Name" />
+                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTemplateColumn  Header="Date" Width=".35*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding Date,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate> 
+                    </DataGridTemplateColumn.CellTemplate> 
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Amount Paid" Width=".35*" Binding="{Binding AmountPaid,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Invoice Number" Width=".5*" Binding="{Binding InvoiceNumber,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Notes" Width="*" Binding="{Binding Notes,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+               
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

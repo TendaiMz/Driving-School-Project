@@ -1,0 +1,45 @@
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\BUL.dll
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\BUL.pdb
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\DAL.dll
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\EntityFramework.dll
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\DAL.pdb
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\EntityFramework.xml
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\obj\Debug\BUL.csprojResolveAssemblyReference.cache
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\obj\Debug\BUL.dll
+C:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\obj\Debug\BUL.pdb
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\BUL.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\BUL.pdb
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\DAL.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\EntityFramework.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\DAL.pdb
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\bin\Debug\EntityFramework.xml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\obj\Debug\BUL.csprojResolveAssemblyReference.cache
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\obj\Debug\BUL.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\BUL\obj\Debug\BUL.pdb
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\bin\Debug\BUL.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\bin\Debug\BUL.pdb
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\bin\Debug\DAL.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\bin\Debug\EntityFramework.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\bin\Debug\DAL.pdb
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\bin\Debug\EntityFramework.xml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\obj\Debug\BUL.csprojResolveAssemblyReference.cache
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\obj\Debug\BUL.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\BUL\obj\Debug\BUL.pdb
+C:\Projects\Repos\POINT OF SALE\POS\BUL\bin\Debug\BUL.dll
+C:\Projects\Repos\POINT OF SALE\POS\BUL\bin\Debug\BUL.pdb
+C:\Projects\Repos\POINT OF SALE\POS\BUL\bin\Debug\DAL.dll
+C:\Projects\Repos\POINT OF SALE\POS\BUL\bin\Debug\EntityFramework.dll
+C:\Projects\Repos\POINT OF SALE\POS\BUL\bin\Debug\DAL.pdb
+C:\Projects\Repos\POINT OF SALE\POS\BUL\bin\Debug\EntityFramework.xml
+C:\Projects\Repos\POINT OF SALE\POS\BUL\obj\Debug\BUL.csprojResolveAssemblyReference.cache
+C:\Projects\Repos\POINT OF SALE\POS\BUL\obj\Debug\BUL.dll
+C:\Projects\Repos\POINT OF SALE\POS\BUL\obj\Debug\BUL.pdb
+C:\Projects\Repos\Driving-School-Project\POS\BUL\bin\Debug\BUL.dll
+C:\Projects\Repos\Driving-School-Project\POS\BUL\bin\Debug\BUL.pdb
+C:\Projects\Repos\Driving-School-Project\POS\BUL\bin\Debug\DAL.dll
+C:\Projects\Repos\Driving-School-Project\POS\BUL\bin\Debug\EntityFramework.dll
+C:\Projects\Repos\Driving-School-Project\POS\BUL\bin\Debug\DAL.pdb
+C:\Projects\Repos\Driving-School-Project\POS\BUL\bin\Debug\EntityFramework.xml
+C:\Projects\Repos\Driving-School-Project\POS\BUL\obj\Debug\BUL.csprojResolveAssemblyReference.cache
+C:\Projects\Repos\Driving-School-Project\POS\BUL\obj\Debug\BUL.dll
+C:\Projects\Repos\Driving-School-Project\POS\BUL\obj\Debug\BUL.pdb

@@ -1,0 +1,172 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:DAL="clr-namespace:DAL;assembly=DAL" mc:Ignorable="d" x:Class="PointOfSale.test"
+        Title="test" Height="500" Width="700" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="customerViewSource" d:DesignSource="{d:DesignInstance {x:Type DAL:Customer}, CreateList=True}"/>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="5">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Key="DataTemplate1">
+            <Grid Height="312" Width="530">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="51*"/>
+                    <RowDefinition Height="53*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75*"/>
+                    <ColumnDefinition Width="76*"/>
+                    <ColumnDefinition Width="114*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap"><Span Background="White" Foreground="Red" FontSize="12.6666666666667" FontFamily="Consolas"><Run Text="FullName"/></Span></TextBlock>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource customerViewSource}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="152*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="151*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="customerDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="addressColumn" Width="SizeToHeader" Header="Address" Binding="{Binding Address}"/>
+                <DataGridTextColumn x:Name="customerNumberColumn" Width="SizeToHeader" Header="Customer Number" Binding="{Binding CustomerNumber}"/>
+                <DataGridTemplateColumn x:Name="dateOfBirthColumn" Width="SizeToHeader" Header="Date Of Birth">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding DateOfBirth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn x:Name="expiryDateColumn" Width="SizeToHeader" Header="Expiry Date">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding ExpiryDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="firstNameColumn" Width="SizeToHeader" Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn x:Name="fullNameColumn" Width="SizeToHeader" IsReadOnly="True" Header="Full Name" Binding="{Binding FullName}"/>
+                <DataGridTextColumn x:Name="iDColumn" Width="SizeToHeader" Header="ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn x:Name="identityNumberColumn" Width="SizeToHeader" Header="Identity Number" Binding="{Binding IdentityNumber}"/>
+                <DataGridTextColumn x:Name="initialsColumn" Width="SizeToHeader" Header="Initials" Binding="{Binding Initials}"/>
+                <DataGridTextColumn x:Name="nextOfKinColumn" Width="SizeToHeader" Header="Next Of Kin" Binding="{Binding NextOfKin}"/>
+                <DataGridTextColumn x:Name="nextOfKinPhoneNumberColumn" Width="SizeToHeader" Header="Next Of Kin Phone Number" Binding="{Binding NextOfKinPhoneNumber}"/>
+                <DataGridTextColumn x:Name="pDLNumberColumn" Width="SizeToHeader" Header="PDLNumber" Binding="{Binding PDLNumber}"/>
+                <DataGridTextColumn x:Name="phoneNumber1Column" Width="SizeToHeader" Header="Phone Number 1" Binding="{Binding PhoneNumber1}"/>
+                <DataGridTextColumn x:Name="phoneNumber2Column" Width="SizeToHeader" Header="Phone Number 2" Binding="{Binding PhoneNumber2}"/>
+                <DataGridTextColumn x:Name="surnameColumn" Width="SizeToHeader" Header="Surname" Binding="{Binding Surname}"/>
+                <DataGridTemplateColumn x:Name="validColumn" Width="SizeToHeader" Header="Valid">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding Valid, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="26,5,0,0" Grid.Row="1" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="addressLabel" Content="{Binding Address}" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="43,18,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="127,34,0,0" Grid.Row="1" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Valid:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="160,27,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Customer Number:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="customerNumberTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding CustomerNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+        </Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="43,27,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <ListBox Grid.Row="3" Name="lstBx" ItemTemplate="{DynamicResource DataTemplate1}"/>
+
+    </Grid>
+</Window>

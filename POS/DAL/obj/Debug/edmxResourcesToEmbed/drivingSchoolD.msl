@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="drivingSchoolDBModelStoreContainer" CdmEntityContainer="drivingSchoolDBEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingTypes">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.BookingType">
+        <MappingFragment StoreEntitySet="BookingType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BookingName" ColumnName="BookingName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colours">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Colour">
+        <MappingFragment StoreEntitySet="Colour">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Initials" ColumnName="Initials" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="PDLNumber" ColumnName="PDLNumber" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="PhoneNumber1" ColumnName="PhoneNumber1" />
+          <ScalarProperty Name="PhoneNumber2" ColumnName="PhoneNumber2" />
+          <ScalarProperty Name="NextOfKin" ColumnName="NextOfKin" />
+          <ScalarProperty Name="NextOfKinPhoneNumber" ColumnName="NextOfKinPhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DayTimeSlots">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.DayTimeSlot">
+        <MappingFragment StoreEntitySet="DayTimeSlot">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TimeSlot" ColumnName="TimeSlot" />
+          <ScalarProperty Name="AffectedHourSlot1" ColumnName="AffectedHourSlot1" />
+          <ScalarProperty Name="AffectedHourSlot2" ColumnName="AffectedHourSlot2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fuels">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Fuel">
+        <MappingFragment StoreEntitySet="Fuel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructors">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Instructor">
+        <MappingFragment StoreEntitySet="Instructor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="LicenceNumber" ColumnName="LicenceNumber" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DefensiveNo" ColumnName="DefensiveNo" />
+          <ScalarProperty Name="DefensiveExpiry" ColumnName="DefensiveExpiry" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Resigned" ColumnName="Resigned" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="Vehicle" ColumnName="Vehicle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CashierID" ColumnName="CashierID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceLineItems">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.InvoiceLineItem">
+        <MappingFragment StoreEntitySet="InvoiceLineItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LessonLogs">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.LessonLog">
+        <MappingFragment StoreEntitySet="LessonLog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LessonTotalID" ColumnName="LessonTotalID" />
+          <ScalarProperty Name="LessonCount" ColumnName="LessonCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maintenaces">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Maintenace">
+        <MappingFragment StoreEntitySet="Maintenace">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="AmountPaid" ColumnName="AmountPaid" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaintenaceTypes">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.MaintenaceType">
+        <MappingFragment StoreEntitySet="MaintenaceType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Makes">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Make">
+        <MappingFragment StoreEntitySet="Make">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MakeID" ColumnName="MakeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operations">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Operation">
+        <MappingFragment StoreEntitySet="Operation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaswordResets">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.PaswordReset">
+        <MappingFragment StoreEntitySet="PaswordReset">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="SupervisorID" ColumnName="SupervisorID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoadTest_DayTimeSlot">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.RoadTest_DayTimeSlot">
+        <MappingFragment StoreEntitySet="RoadTest_DayTimeSlot">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DayTimeSlotID1" ColumnName="DayTimeSlotID1" />
+          <ScalarProperty Name="DayTimeSlotID2" ColumnName="DayTimeSlotID2" />
+          <ScalarProperty Name="RoadTestID" ColumnName="RoadTestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoadTestTimeSlots">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.RoadTestTimeSlot">
+        <MappingFragment StoreEntitySet="RoadTestTimeSlot">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleItems">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.SaleItem">
+        <MappingFragment StoreEntitySet="SaleItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SaleItemTypeID" ColumnName="SaleItemTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleItemTypes">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.SaleItemType">
+        <MappingFragment StoreEntitySet="SaleItemType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScheduleInstructors">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.ScheduleInstructor">
+        <MappingFragment StoreEntitySet="ScheduleInstructor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="TimeSlotID" ColumnName="TimeSlotID" />
+          <ScalarProperty Name="BookingType" ColumnName="BookingType" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="Pending" ColumnName="Pending" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="NoShow" ColumnName="NoShow" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="AffectedHourSlot" ColumnName="AffectedHourSlot" />
+          <ScalarProperty Name="ScheduleCreatedBy" ColumnName="ScheduleCreatedBy" />
+          <ScalarProperty Name="ScheduleReconsDoneBy" ColumnName="ScheduleReconsDoneBy" />
+          <ScalarProperty Name="ReconsComment" ColumnName="ReconsComment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScheduleItems">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.ScheduleItem">
+        <MappingFragment StoreEntitySet="ScheduleItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Starting" ColumnName="Starting" />
+          <ScalarProperty Name="Ending" ColumnName="Ending" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="Pending" ColumnName="Pending" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TotalLessons">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.TotalLesson">
+        <MappingFragment StoreEntitySet="TotalLessons">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="TotalLessons" ColumnName="TotalLessons" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Units">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Unit">
+        <MappingFragment StoreEntitySet="Units">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Activated" ColumnName="Activated" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTypes">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.UserType">
+        <MappingFragment StoreEntitySet="UserType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicles">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.Vehicle">
+        <MappingFragment StoreEntitySet="Vehicle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="VehicleRegistration" ColumnName="VehicleRegistration" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ChasisNumber" ColumnName="ChasisNumber" />
+          <ScalarProperty Name="EngineNumber" ColumnName="EngineNumber" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Fuel" ColumnName="Fuel" />
+          <ScalarProperty Name="Milage" ColumnName="Milage" />
+          <ScalarProperty Name="Servicing" ColumnName="Servicing" />
+          <ScalarProperty Name="InsuranceExipry" ColumnName="InsuranceExipry" />
+          <ScalarProperty Name="TankCapacity" ColumnName="TankCapacity" />
+          <ScalarProperty Name="VehicleType" ColumnName="VehicleType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleFuelings">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.VehicleFueling">
+        <MappingFragment StoreEntitySet="VehicleFueling">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FuelAmount" ColumnName="FuelAmount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="Milage" ColumnName="Milage" />
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleTypes">
+      <EntityTypeMapping TypeName="drivingSchoolDBModel.VehicleType">
+        <MappingFragment StoreEntitySet="VehicleType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="drivingSchoolDBModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale", "PointOfSale\PointOfSale.csproj", "{49B6831D-9BDA-4BCD-9D12-42B0F9D22D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUL", "BUL\BUL.csproj", "{60E48CA4-65DF-4574-B496-3C9DC3BDA9D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{005E7B03-BD12-401C-B4FE-6B04551CB03C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49B6831D-9BDA-4BCD-9D12-42B0F9D22D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B6831D-9BDA-4BCD-9D12-42B0F9D22D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B6831D-9BDA-4BCD-9D12-42B0F9D22D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B6831D-9BDA-4BCD-9D12-42B0F9D22D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E48CA4-65DF-4574-B496-3C9DC3BDA9D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E48CA4-65DF-4574-B496-3C9DC3BDA9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E48CA4-65DF-4574-B496-3C9DC3BDA9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E48CA4-65DF-4574-B496-3C9DC3BDA9D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{005E7B03-BD12-401C-B4FE-6B04551CB03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{005E7B03-BD12-401C-B4FE-6B04551CB03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{005E7B03-BD12-401C-B4FE-6B04551CB03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{005E7B03-BD12-401C-B4FE-6B04551CB03C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

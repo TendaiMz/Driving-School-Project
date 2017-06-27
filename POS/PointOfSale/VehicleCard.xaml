@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="PointOfSale.VehicleCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" Background="WhiteSmoke"
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="10" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Create New Vehicle" FontSize="18" FontWeight="Bold" />
+
+            <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Content="Vehicle Reg Number" />
+            <Label Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Content="Make" />
+            <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Content="Model" />
+            <Label Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Content="Chassis Number" />
+            <Label Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Content="Engine Number" />
+            <Label Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" Content="Year" />
+            <Label Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Content="Colour" />
+            <Label Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" Content="Fuel Type"/>
+            <Label Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" Content="Type"/>
+            <Label Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" Content="Milage To Service"/>
+            <Label Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" Content="Milage" />
+            <Label Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" Content="Servicing" />
+            <Label Grid.Column="4" Grid.Row="4" VerticalAlignment="Center" Content="Insurance Exipry"/>
+            <Label Grid.Column="4" Grid.Row="5" VerticalAlignment="Center" Content="Tank Capacity" />
+            <Grid Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="127*"/>
+                    <RowDefinition Height="23*"/>
+                </Grid.RowDefinitions>
+
+                <Image  Source="Icons\sedan.png" Grid.Row="0" />
+
+            </Grid>
+            <TextBox  Name="txtReg" Grid.Column="1" Grid.Row="1" MaxHeight="25"  Margin="10,20,10,20" />
+            <ComboBox Name="cmbMake" Grid.Column="1" Grid.Row="2" MaxHeight="25" Margin="10,20,10,20" SelectedValuePath="ID" DisplayMemberPath="Name" />
+            <ComboBox Name="cmbModel" Grid.Column="1" Grid.Row="3" MaxHeight="25" Margin="10,20,10,20" SelectedValuePath="ID" DisplayMemberPath="Name" />
+            <TextBox Name="txtChasis" Grid.Column="1" Grid.Row="4" MaxHeight="25"  Margin="10,20,10,20" />
+            <!--<TextBox Grid.Column="1" Grid.Row="4"  Margin="10,20,10,20" />-->
+            <TextBox Name="txtEngineNumber" Grid.Column="1" Grid.Row="5" MaxHeight="25" Margin="10,20,10,20"/>
+            <xctk:DateTimePicker Name="dtpYear" Grid.Column="3" Grid.Row="1" Format="YearMonth" MaxHeight="25" Margin="10,20,10,20" />
+            <ComboBox Name="cmbColor"  Grid.Column="3" Grid.Row="2" MaxHeight="25" Margin="10,20,10,20" SelectedValuePath="ID" DisplayMemberPath="Color" />
+            <ComboBox Name="cmbFuel" Grid.Column="3" Grid.Row="3" MaxHeight="25"  Margin="10,20,10,20"  SelectedValuePath="ID" DisplayMemberPath="Name"/>
+            <ComboBox Name="cmbType" Grid.Column="5" Grid.Row="2" MaxHeight="25" Margin="10,20,10,20" SelectedValuePath="ID" DisplayMemberPath="Name" />
+            <TextBox Name="txtToService" Grid.Column="5" Grid.Row="3" IsReadOnly="True" MaxHeight="25" Margin="10,20,10,20" />
+            <xctk:DecimalUpDown Name="txtMilage" Grid.Column="3" Grid.Row="4" MaxHeight="25"  Margin="10,20,10,20" ShowButtonSpinner="False" />
+            <TextBox Name="txtServicing" Grid.Column="3" Grid.Row="5" MaxHeight="25" Margin="10,20,10,20" />
+            <xctk:DecimalUpDown Name="txtTankCapacity" Grid.Column="5" Grid.Row="5" MaxHeight="25" Margin="10,20,10,20" ShowButtonSpinner="False" />
+            <DatePicker Name="dtpInsurance" Grid.Column="5" Grid.Row="4" MaxHeight="25" Margin="10,20,10,20" />
+
+        </Grid>
+        <Button Name="btnSave" Grid.Column="0" Grid.Row="1" Content="Save" HorizontalAlignment="Right" Margin="10" Width="85"  Height="35" Click="btnSave_Click" />
+
+
+    </Grid>
+</UserControl>

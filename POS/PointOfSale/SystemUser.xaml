@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="PointOfSale.SystemUser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             xmlns:xtck="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" Name="dtgUsers" AutoGenerateColumns="False" BorderThickness="0" GridLinesVisibility="Horizontal" IsReadOnly="False" CanUserAddRows="False"
+                  HorizontalGridLinesBrush="SkyBlue" RowBackground="WhiteSmoke" Background="WhiteSmoke" CellEditEnding="dtgUsers_CellEditEnding"
+                  CurrentCellChanged="dtgUsers_CurrentCellChanged" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Surname" Width="*" Binding="{Binding Surname,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Contact Number" Width=".75*" Binding="{Binding ContactNumber,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Email" Width=".75*" Binding="{Binding Email,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="User Name" Width="*" Binding="{Binding UserName,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}" />
+                <DataGridComboBoxColumn x:Name="cmbUserType" Header="User Type" Width=".75*"  SelectedValueBinding="{Binding UserType,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID" DisplayMemberPath="Name"/>
+                <DataGridTextColumn Header="Password" Width="1.5*" Binding="{Binding PasswordHash,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridCheckBoxColumn Header="Activated"  Width=".5*" Binding="{Binding Activated,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged}" />
+               
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btnUpdate" Grid.Row="1" Content="Reset Password" HorizontalAlignment="Right" Margin="10" Width="100" Height="35" Click="btnUpdate_Click" />
+      
+        <xtck:WindowContainer>
+            <xtck:ChildWindow Caption=" Reset Password" Name="wndUpdateUser" IsModal="True" WindowBackground="Blue"
+                    Left="500" BorderThickness="5"
+                    Top="100"
+                    Width="300"
+                    Height="200"
+                    Padding="10">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height=".25*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                       
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Name" VerticalAlignment="Center"/>
+                    <Label Grid.Column="0" Grid.Row="2" Content="Supervisor Password" VerticalAlignment="Center"/>
+                   
+                    <ComboBox Name="cmbUserName"  Grid.Column="1" Grid.Row="1" Margin="10,15" DisplayMemberPath="FullName" SelectedValuePath="ID" />
+                    <PasswordBox Name="txtPassword" Grid.Column="1" Grid.Row="2" Margin="10,15" />
+                    <Button Name="btnReset" Grid.Column="1" Grid.Row="3" Height="30" Width="75" Content="RESET" Margin="10" Click="btnReset_Click"/>
+                </Grid>
+
+            </xtck:ChildWindow>
+
+        </xtck:WindowContainer>
+
+
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="PointOfSale.EditVehicle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="WhiteSmoke">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="10" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Edit Vehicle Data" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+            <WrapPanel Name="wrpSearch" Grid.Column="1" Grid.Row="1">
+                <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Content="Search" />
+                <xctk:WatermarkComboBox Name="cmbVehicleSearch" Margin="5" Grid.Column="2" Grid.Row="4" Width="150" Height="30" IsEditable="True" DisplayMemberPath="VehicleRegistration"  SelectedValuePath="ID" Watermark=" Vehicle Reg Number"  SelectionChanged="cmbVehicleSearch_SelectionChanged" />
+            </WrapPanel>
+            <Label Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Content="Vehicle Reg Number" Margin="0,1,0,2" />
+            <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Content="Make" Margin="0,2,0,1" />
+            <Label Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Content="Model" Margin="0,1,0,2" />
+            <Label Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Content="Chassis Number" Margin="0,2,0,1" />
+            <Label Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Content="Engine Number" Margin="0,1,0,2" />
+            <Label Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Content="Year" Margin="0,1,0,2" />
+            <Label Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" Content="Colour" Margin="0,2,0,1" />
+            <Label Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" Content="Fuel Type" Margin="0,1,0,2"/>
+            <Label Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" Content="Type" Margin="0,2,0,1"/>
+            <Label Grid.Column="4" Grid.Row="4" VerticalAlignment="Center" Content="Milage To Service" Margin="0,1,0,2"/>
+            <Label Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" Content="Milage" Margin="0,2,0,1" />
+            <Label Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" Content="Servicing" Margin="0,1,0,2" />
+            <Label Grid.Column="4" Grid.Row="5" VerticalAlignment="Center" Content="Insurance Exipry" Margin="0,2,0,1"/>
+            <Label Grid.Column="4" Grid.Row="6" VerticalAlignment="Center" Content="Tank Capacity" Margin="0,1,0,2" />
+            <Grid Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="127*"/>
+                    <RowDefinition Height="23*"/>
+                </Grid.RowDefinitions>
+
+                <Image  Source="Icons\sedan.png" Grid.Row="0" />
+
+            </Grid>
+
+
+            <TextBox Name="txtID" Grid.Column="0" Grid.Row="0" Text="{Binding Path=ID}"  Visibility="Collapsed" Grid.RowSpan="2" />
+
+            <TextBox  Name="txtReg" Grid.Column="1" Grid.Row="2"  MaxHeight="25" Margin="10" Text="{Binding Path=VehicleRegistration}" />
+            <TextBox Name="txtMake" Grid.Column="1" Grid.Row="3" MaxHeight="25" Margin="10" Text="{Binding Path=Make}" Visibility="Hidden" />
+            <TextBox Name="txtModel" Grid.Column="1" Grid.Row="4" MaxHeight="25" Margin="10" Text="{Binding Path=Model}"   Visibility="Hidden"/>
+            <ComboBox Name="cmbMake" Grid.Column="1" Grid.Row="3" MaxHeight="25" Margin="10" SelectedValuePath="ID" DisplayMemberPath="Name" IsEditable="True"  SelectedValue="{Binding Path=Make}" />
+            <ComboBox Name="cmbModel" Grid.Column="1" Grid.Row="4" MaxHeight="25" Margin="10" SelectedValuePath="ID" DisplayMemberPath="Name" IsEditable="True" SelectedValue="{Binding Path=Model}" />
+            <TextBox Name="txtChasis" Grid.Column="1" Grid.Row="5" MaxHeight="25"  Margin="10" Text="{Binding Path=ChasisNumber}" />
+            <TextBox Name="txtEngineNumber" Grid.Column="1" Grid.Row="6" MaxHeight="25" Margin="10" Text="{Binding Path=EngineNumber}"/>
+            <xctk:DateTimePicker Name="dtpYear" Grid.Column="3" Grid.Row="2" Format="YearMonth" MaxHeight="25" Margin="10"  Text="{Binding Path=Year}" />
+            <ComboBox Name="cmbColor"  Grid.Column="3" Grid.Row="3"  MaxHeight="25" Margin="10" SelectedValuePath="ID" DisplayMemberPath="Color" IsEditable="True" SelectedValue="{Binding Path=Colour}" />
+            <ComboBox Name="cmbFuel" Grid.Column="3" Grid.Row="4" MaxHeight="25"  Margin="10"  SelectedValuePath="ID" DisplayMemberPath="Name" IsEditable="True" SelectedValue="{Binding Path=Fuel}"/>
+            <ComboBox Name="cmbType" Grid.Column="5" Grid.Row="3" MaxHeight="25" Margin="10" SelectedValuePath="ID" DisplayMemberPath="Name" IsEditable="True" SelectedValue="{Binding Path=VehicleType}" />
+            <TextBox Name="txtToService" Grid.Column="5" Grid.Row="4" IsReadOnly="True" MaxHeight="25" Margin="10"  />
+            <TextBox Name="txtMilage" Grid.Column="3" Grid.Row="5" MaxHeight="25"  Margin="10" Text="{Binding Path=Milage}" />
+            <TextBox Name="txtServicing" Grid.Column="3" Grid.Row="6" MaxHeight="25"  Margin="10" Text="{Binding Path=Servicing}" />
+            <TextBox Name="txtTankCapacity" Grid.Column="5" Grid.Row="6" MaxHeight="25" Margin="10" Text="{Binding Path=TankCapacity}" />
+            <DatePicker Name="dtpInsurance" Grid.Column="5" Grid.Row="5" MaxHeight="25" Margin="10" Text="{Binding Path=InsuranceExipry}" />
+
+            <StackPanel Name="stkNav" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,27,12,-1" Grid.RowSpan="2">
+                <WrapPanel Name="wrpNav" >
+                    <Button Name="btnPrev"  Width="30" Height="30" Margin="0,0,5,0"  Click="btnPrev_Click" BorderThickness="0" Background="Transparent">
+                        <Image Source="Icons\next_001.png"/>
+                    </Button>
+                    <Button Name="btnNext"  Width="30" Height="30"  Margin="5,0,0,0"   Click="btnNext_Click" BorderThickness="0" Background="Transparent">
+                        <Image Source="Icons\next.png"/>
+                    </Button>
+                </WrapPanel>
+                <TextBlock Name="lblPosition" />
+            </StackPanel>
+
+        </Grid>
+        <Button Name="btnUpdate" Grid.Column="0" Grid.Row="1" Content="Update" HorizontalAlignment="Right" Margin="0,0,15,0" Width="65"  Height="30" Click="btnUpdate_Click" />
+
+
+    </Grid>
+</UserControl>

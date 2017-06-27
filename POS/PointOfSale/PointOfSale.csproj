@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49B6831D-9BDA-4BCD-9D12-42B0F9D22D8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PointOfSale</RootNamespace>
+    <AssemblyName>PointOfSale</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\H.P\Documents\Publish\POS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Point Of Sale</ProductName>
+    <PublisherName>Tendai Mzondo</PublisherName>
+    <ApplicationRevision>39</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6BE52AA38C34B9EDD0621BBDA179CC3477EF93E9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PointOfSale_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pos_.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="Syncfusion.Compression.Base, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfCellGrid.WPF, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfGridCommon.WPF, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfRadialMenu.Wpf, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfSchedule.WPF, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfSpreadsheet.WPF, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Wpf, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Wpf, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.XlsIO.Base, Version=14.4451.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfScheduler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\TENDAI\Desktop\schedular\SchedularSourceCode\bin\Debug\WpfScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\AddOn\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CancelSale.xaml.cs">
+      <DependentUpon>CancelSale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CashUp.xaml.cs">
+      <DependentUpon>CashUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\CashUpData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashUpData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DaySheetSchedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DaySheetSchedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DetailedMonthlyData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetailedMonthlyData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DetailedSalesData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetailedSalesData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\IncomeExpenditureSummarised.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeExpenditureSummarised.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\InstructorCashFlowData.cs">
+      <DependentUpon>InstructorCashFlowData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet\InstructorCashFlowData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InstructorCashFlowData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\InstructorFuelUsage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InstructorFuelUsage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DaySheetRprt.xaml.cs">
+      <DependentUpon>DaySheetRprt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedMonthlyReport.xaml.cs">
+      <DependentUpon>DetailedMonthlyReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedSales.xaml.cs">
+      <DependentUpon>DetailedSales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="drivingSchoolDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>drivingSchoolDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditVehicle.xaml.cs">
+      <DependentUpon>EditVehicle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fueling.xaml.cs">
+      <DependentUpon>Fueling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FuelUsageReporting.xaml.cs">
+      <DependentUpon>FuelUsageReporting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="InstructorCashFlow.xaml.cs">
+      <DependentUpon>InstructorCashFlow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorSchedule.xaml.cs">
+      <DependentUpon>InstructorSchedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.xaml.cs">
+      <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordHashing.cs" />
+    <Compile Include="InstructorDetails.xaml.cs">
+      <DependentUpon>InstructorDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceCard.xaml.cs">
+      <DependentUpon>MaintenanceCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Product.xaml.cs">
+      <DependentUpon>Product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentSchedule.xaml.cs">
+      <DependentUpon>StudentSchedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SummarisedIncomeExpenditure.xaml.cs">
+      <DependentUpon>SummarisedIncomeExpenditure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser.xaml.cs">
+      <DependentUpon>SystemUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="VehicleCard.xaml.cs">
+      <DependentUpon>VehicleCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCustomer.xaml.cs">
+      <DependentUpon>ViewCustomer.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CancelSale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CashUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DailySheet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DaySheetRprt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailedMonthlyReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailedSales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditVehicle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fueling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FuelUsageReporting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InstructorCashFlow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InstructorDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InstructorSchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MaintenanceCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DailySheet.xaml.cs">
+      <DependentUpon>DailySheet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewSaler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrintCustomerInvoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrintReceipt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Product.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentSchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SummarisedIncomeExpenditure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VehicleCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewCustomer.xaml.cs">
+      <DependentUpon>NewCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewSaler.xaml.cs">
+      <DependentUpon>NewSaler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCustomerInvoice.xaml.cs">
+      <DependentUpon>PrintCustomerInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrintReceipt.xaml.cs">
+      <DependentUpon>PrintReceipt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Icons\newspaper.png" />
+    <Resource Include="Icons\analytics.png" />
+    <Resource Include="Icons\report1.png" />
+    <Content Include="Report\FuelUsage.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\InstructorCashFlowRprt.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\SummarisedIncomeExpenditure.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\DetailedMonthly.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\DetailedIncomeFlow.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\Fueling.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="pos_logo.ico" />
+    <Resource Include="Icons\pos_logo.ico" />
+    <Resource Include="Icons\pos.png" />
+    <Resource Include="pos_.ico" />
+    <Content Include="Report\InstructorDaySheet.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\CashUpRprt.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\DetailedSalesRpt.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="DataSet\CashUpData.xsc">
+      <DependentUpon>CashUpData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\CashUpData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CashUpData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\CashUpData.xss">
+      <DependentUpon>CashUpData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DaySheetSchedule.xsc">
+      <DependentUpon>DaySheetSchedule.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DaySheetSchedule.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DaySheetSchedule.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DaySheetSchedule.xss">
+      <DependentUpon>DaySheetSchedule.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DetailedMonthlyData.xsc">
+      <DependentUpon>DetailedMonthlyData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DetailedMonthlyData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DetailedMonthlyData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DetailedMonthlyData.xss">
+      <DependentUpon>DetailedMonthlyData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DetailedSalesData.xsc">
+      <DependentUpon>DetailedSalesData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DetailedSalesData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DetailedSalesData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DetailedSalesData.xss">
+      <DependentUpon>DetailedSalesData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\IncomeExpenditureSummarised.xsc">
+      <DependentUpon>IncomeExpenditureSummarised.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\IncomeExpenditureSummarised.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeExpenditureSummarised.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\IncomeExpenditureSummarised.xss">
+      <DependentUpon>IncomeExpenditureSummarised.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\InstructorCashFlowData.xsc">
+      <DependentUpon>InstructorCashFlowData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\InstructorCashFlowData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InstructorCashFlowData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\InstructorCashFlowData.xss">
+      <DependentUpon>InstructorCashFlowData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\InstructorFuelUsage.xsc">
+      <DependentUpon>InstructorFuelUsage.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\InstructorFuelUsage.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InstructorFuelUsage.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\InstructorFuelUsage.xss">
+      <DependentUpon>InstructorFuelUsage.xsd</DependentUpon>
+    </None>
+    <None Include="drivingSchoolDBDataSet.xsc">
+      <DependentUpon>drivingSchoolDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="drivingSchoolDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>drivingSchoolDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="drivingSchoolDBDataSet.xss">
+      <DependentUpon>drivingSchoolDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PointOfSale_1_TemporaryKey.pfx" />
+    <None Include="PointOfSale_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\DAL.Customer.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUL\BUL.csproj">
+      <Project>{60e48ca4-65df-4574-b496-3c9dc3bda9d4}</Project>
+      <Name>BUL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{005e7b03-bd12-401c-b4fe-6b04551cb03c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Add-icon.png" />
+    <Resource Include="Icons\clipboard1.ico" />
+    <Resource Include="Icons\delete-icon.png" />
+    <Resource Include="Icons\filter-icon.png" />
+    <Resource Include="Icons\help.png" />
+    <Resource Include="Icons\lock.ico" />
+    <Resource Include="Icons\new-icon.png" />
+    <Resource Include="Icons\opendoc.ico" />
+    <Resource Include="Icons\options.png" />
+    <Resource Include="Icons\quit.png" />
+    <Resource Include="Icons\report.ico" />
+    <Resource Include="Icons\report1.ico" />
+    <Resource Include="Icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\sedan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\delete.png" />
+    <Resource Include="Icons\delete_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\next.png" />
+    <Resource Include="Icons\next_001.png" />
+    <Resource Include="Icons\sale.png" />
+    <Resource Include="Icons\sale-label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\clerk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\student.png" />
+    <Resource Include="Icons\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\driver.png" />
+    <Resource Include="Icons\sports-car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\shedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\report.png" />
+    <Resource Include="Icons\coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\edit01.png" />
+    <Resource Include="Icons\editor.png" />
+    <Resource Include="Icons\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\read.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\maintenance.png" />
+    <Resource Include="Icons\station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\cashier.png" />
+    <Resource Include="Icons\management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\management_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\calendar.png" />
+    <Resource Include="Icons\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\Rosepet.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Syncfusion.Compression.Base">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.SfCellGrid.WPF">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.SfGridCommon.WPF">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.SfRadialMenu.Wpf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.SfSchedule.WPF">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.SfShared.Wpf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.SfSpreadsheet.WPF">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.Shared.Wpf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.Tools.Wpf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.XlsIO.Base">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

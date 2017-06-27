@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="drivingSchoolDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="BookingType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookingName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Colour">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Initials" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdentityNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="PDLNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="Valid" Type="DateTime" Precision="3" />
+    <Property Name="PhoneNumber1" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="NextOfKin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NextOfKinPhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DayTimeSlot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeSlot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AffectedHourSlot1" Type="Byte" />
+    <Property Name="AffectedHourSlot2" Type="Byte" />
+  </EntityType>
+  <EntityType Name="Fuel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="LicenceNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DefensiveNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DefensiveExpiry" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Resigned" Type="Boolean" Nullable="false" />
+    <Property Name="IDNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Vehicle" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="CashierID" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Cancelled" Type="Boolean" />
+    <Property Name="CancelledBy" Type="Int32" />
+    <Property Name="CancellationReason" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="InvoiceLineItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="InvoiceID" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UnitID" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Discount" Type="Decimal" Precision="10" Scale="6" />
+  </EntityType>
+  <EntityType Name="LessonLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LessonTotalID" Type="Int32" />
+    <Property Name="LessonCount" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Maintenace">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CarID" Type="Byte" />
+    <Property Name="InstructorID" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="AmountPaid" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="Byte" />
+    <Property Name="TypeID" Type="Byte" />
+    <Property Name="Notes" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MaintenaceType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Make">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MakeID" Type="Byte" />
+  </EntityType>
+  <EntityType Name="Operation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PaswordReset">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Byte" />
+    <Property Name="SupervisorID" Type="Byte" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RoadTest_DayTimeSlot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DayTimeSlotID1" Type="Byte" />
+    <Property Name="DayTimeSlotID2" Type="Byte" />
+    <Property Name="RoadTestID" Type="Byte" />
+  </EntityType>
+  <EntityType Name="RoadTestTimeSlot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Time" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SaleItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="SaleItemTypeID" Type="Int16" />
+  </EntityType>
+  <EntityType Name="SaleItemType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ScheduleInstructor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="InstructorID" Type="Int32" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="TimeSlotID" Type="Int32" />
+    <Property Name="BookingType" Type="Int16" />
+    <Property Name="Completed" Type="Boolean" />
+    <Property Name="Pending" Type="Boolean" />
+    <Property Name="Cancelled" Type="Boolean" />
+    <Property Name="NoShow" Type="Boolean" />
+    <Property Name="UserID" Type="Byte" />
+    <Property Name="AffectedHourSlot" Type="Byte" />
+    <Property Name="ScheduleCreatedBy" Type="Byte" />
+    <Property Name="ScheduleReconsDoneBy" Type="Byte" />
+    <Property Name="ReconsComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ScheduleItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Starting" Type="DateTime" Precision="3" />
+    <Property Name="Ending" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DriverID" Type="Int32" />
+    <Property Name="Completed" Type="Boolean" />
+    <Property Name="Pending" Type="Boolean" />
+    <Property Name="Cancelled" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TotalLesson">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TotalLessons" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UserType" Type="Byte" />
+    <Property Name="ContactNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Activated" Type="Boolean" />
+    <Property Name="PasswordHash" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Salt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleRegistration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Make" Type="Byte" />
+    <Property Name="Model" Type="Byte" />
+    <Property Name="ChasisNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EngineNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="DateTime" Precision="3" />
+    <Property Name="Colour" Type="Byte" />
+    <Property Name="Fuel" Type="Byte" />
+    <Property Name="Milage" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Servicing" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="InsuranceExipry" Type="DateTime" Precision="3" />
+    <Property Name="TankCapacity" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="VehicleType" Type="Byte" />
+  </EntityType>
+  <EntityType Name="VehicleFueling">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FuelAmount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="InstructorID" Type="Int32" />
+    <Property Name="UserID" Type="Byte" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Milage" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="VehicleID" Type="Byte" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Notes" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VehicleType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vwInstructorGeneratedIncome">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="InstructorName" Type="String" MaxLength="51" FixedLength="false" Unicode="true" />
+    <Property Name="InstructorID" Type="Int32" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="StudentName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Discount" Type="Decimal" Precision="10" Scale="6" />
+    <Property Name="actual" Type="Decimal" Precision="26" Scale="12" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwInstuctorFuelCost">
+    <Key>
+      <PropertyRef Name="InstuctorCode" />
+    </Key>
+    <Property Name="FullName" Type="String" MaxLength="51" FixedLength="false" Unicode="true" />
+    <Property Name="FuelCost" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="InstuctorCode" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwLessonsCompletedByInstuctor">
+    <Key>
+      <PropertyRef Name="InstuctorCode" />
+    </Key>
+    <Property Name="FullName" Type="String" MaxLength="51" FixedLength="false" Unicode="true" />
+    <Property Name="LessonsCompleted" Type="Int32" />
+    <Property Name="MonthName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="InstuctorCode" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="drivingSchoolDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="BookingTypes" EntityType="Self.BookingType" />
+    <EntitySet Name="Colours" EntityType="Self.Colour" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="DayTimeSlots" EntityType="Self.DayTimeSlot" />
+    <EntitySet Name="Fuels" EntityType="Self.Fuel" />
+    <EntitySet Name="Instructors" EntityType="Self.Instructor" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+    <EntitySet Name="InvoiceLineItems" EntityType="Self.InvoiceLineItem" />
+    <EntitySet Name="LessonLogs" EntityType="Self.LessonLog" />
+    <EntitySet Name="Maintenaces" EntityType="Self.Maintenace" />
+    <EntitySet Name="MaintenaceTypes" EntityType="Self.MaintenaceType" />
+    <EntitySet Name="Makes" EntityType="Self.Make" />
+    <EntitySet Name="Models" EntityType="Self.Model" />
+    <EntitySet Name="Operations" EntityType="Self.Operation" />
+    <EntitySet Name="PaswordResets" EntityType="Self.PaswordReset" />
+    <EntitySet Name="RoadTest_DayTimeSlot" EntityType="Self.RoadTest_DayTimeSlot" />
+    <EntitySet Name="RoadTestTimeSlots" EntityType="Self.RoadTestTimeSlot" />
+    <EntitySet Name="SaleItems" EntityType="Self.SaleItem" />
+    <EntitySet Name="SaleItemTypes" EntityType="Self.SaleItemType" />
+    <EntitySet Name="ScheduleInstructors" EntityType="Self.ScheduleInstructor" />
+    <EntitySet Name="ScheduleItems" EntityType="Self.ScheduleItem" />
+    <EntitySet Name="TotalLessons" EntityType="Self.TotalLesson" />
+    <EntitySet Name="Units" EntityType="Self.Unit" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+    <EntitySet Name="Vehicles" EntityType="Self.Vehicle" />
+    <EntitySet Name="VehicleFuelings" EntityType="Self.VehicleFueling" />
+    <EntitySet Name="VehicleTypes" EntityType="Self.VehicleType" />
+    <EntitySet Name="vwInstructorGeneratedIncomes" EntityType="Self.vwInstructorGeneratedIncome" />
+    <EntitySet Name="vwInstuctorFuelCosts" EntityType="Self.vwInstuctorFuelCost" />
+    <EntitySet Name="vwLessonsCompletedByInstuctors" EntityType="Self.vwLessonsCompletedByInstuctor" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <FunctionImport Name="spCasUp" ReturnType="Collection(drivingSchoolDBModel.spCasUp_Result)">
+      <Parameter Name="start" Mode="In" Type="DateTime" />
+      <Parameter Name="end" Mode="In" Type="DateTime" />
+      <Parameter Name="user" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDetailedSales" ReturnType="Collection(drivingSchoolDBModel.spDetailedSales_Result)">
+      <Parameter Name="start" Mode="In" Type="DateTime" />
+      <Parameter Name="end" Mode="In" Type="DateTime" />
+      <Parameter Name="user" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spFuelUsage" ReturnType="Collection(drivingSchoolDBModel.spFuelUsage_Result)">
+      <Parameter Name="start" Mode="In" Type="DateTime" />
+      <Parameter Name="end" Mode="In" Type="DateTime" />
+      <Parameter Name="instructorid" Mode="In" Type="Int32" />
+      <Parameter Name="vehicleid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInstructorFuelUsage" ReturnType="Collection(drivingSchoolDBModel.spInstructorFuelUsage_Result)">
+      <Parameter Name="start" Mode="In" Type="Int32" />
+      <Parameter Name="end" Mode="In" Type="Int32" />
+      <Parameter Name="year" Mode="In" Type="Int32" />
+      <Parameter Name="instructorid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInstructorIncomeExpenditure" ReturnType="Collection(drivingSchoolDBModel.spInstructorIncomeExpenditure_Result)">
+      <Parameter Name="instructorId" Mode="In" Type="Int32" />
+      <Parameter Name="start" Mode="In" Type="DateTime" />
+      <Parameter Name="end" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spInstructorSchedule" ReturnType="Collection(drivingSchoolDBModel.spInstructorSchedule_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spCasUp_Result">
+    <Property Type="Decimal" Name="SALES" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="101" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProductTotal" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spDetailedSales_Result">
+    <Property Type="DateTime" Name="SaleDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="InvoiceNumber" Nullable="true" MaxLength="15" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="Int32" Name="ProductQty" Nullable="true" />
+    <Property Type="Decimal" Name="DiscountPercentage" Nullable="true" Precision="10" Scale="6" />
+    <Property Type="Decimal" Name="Discount" Nullable="true" Precision="35" Scale="10" />
+    <Property Type="Decimal" Name="Cost" Nullable="true" Precision="36" Scale="10" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CashierName" Nullable="true" MaxLength="101" />
+  </ComplexType>
+  <ComplexType Name="spFuelUsage_Result">
+    <Property Type="Decimal" Name="FuelUsed" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="OpeningMilage" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="ClosingMilage" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="MilageTravelled" Nullable="true" Precision="11" Scale="2" />
+    <Property Type="Decimal" Name="Cost" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="AverageFuelUsage" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="UsagePerKM" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="String" Name="VehicleRegistration" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="51" />
+    <Property Type="String" Name="Month" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="YEAR" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spInstructorFuelUsage_Result">
+    <Property Type="Int32" Name="InstuctorCode" Nullable="false" />
+    <Property Type="Decimal" Name="FuelCost" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="FuelUsed" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="MonthName" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="TheYear" Nullable="true" />
+    <Property Type="Decimal" Name="Opening" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="Closing" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="Travelled" Nullable="true" Precision="11" Scale="2" />
+    <Property Type="Decimal" Name="UsagePerLiter" Nullable="true" Precision="38" Scale="27" />
+  </ComplexType>
+  <ComplexType Name="spInstructorIncomeExpenditure_Result">
+    <Property Type="Decimal" Name="AmountPaid" Nullable="true" Precision="38" Scale="12" />
+    <Property Type="Int32" Name="InstructorID" Nullable="true" />
+    <Property Type="String" Name="InstructorName" Nullable="true" MaxLength="51" />
+    <Property Type="String" Name="StudentName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="InvoiceDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spInstructorSchedule_Result">
+    <Property Type="Byte" Name="ID" Nullable="false" />
+    <Property Type="String" Name="TimeSlot" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="AffectedHourSlot1" Nullable="true" />
+    <Property Type="Byte" Name="AffectedHourSlot2" Nullable="true" />
+    <Property Type="Int32" Name="TimeSlotID" Nullable="true" />
+    <Property Type="DateTime" Name="TheDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Student" Nullable="true" MaxLength="102" />
+    <Property Type="String" Name="Instuctor" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Booking" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{005E7B03-BD12-401C-B4FE-6B04551CB03C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingType.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Colour.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DayTimeSlot.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="drivingSchoolDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>drivingSchoolDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="drivingSchoolDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="drivingSchoolDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>drivingSchoolDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Fuel.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceLineItem.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LessonLog.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenace.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenaceType.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Make.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Operation.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaswordReset.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatialClasses.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoadTestTimeSlot.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoadTest_DayTimeSlot.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SaleItem.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SaleItemType.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleInstructor.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleItem.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spCasUp_Result.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spDetailedSales_Result.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spFuelUsage_Result.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spInstructorFuelUsage_Result.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spInstructorIncomeExpenditure_Result.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spInstructorSchedule_Result.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TotalLesson.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Unit.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserType.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleFueling.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleType.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwInstructorGeneratedIncome.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwInstuctorFuelCost.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwLessonsCompletedByInstuctor.cs">
+      <DependentUpon>drivingSchoolDB.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="drivingSchoolDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>drivingSchoolDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="drivingSchoolDB.edmx.diagram">
+      <DependentUpon>drivingSchoolDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="drivingSchoolDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>drivingSchoolDB.edmx</DependentUpon>
+      <LastGenOutput>drivingSchoolDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="drivingSchoolDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>drivingSchoolDB.edmx</DependentUpon>
+      <LastGenOutput>drivingSchoolDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

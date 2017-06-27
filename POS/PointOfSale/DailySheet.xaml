@@ -1,0 +1,137 @@
+﻿<UserControl x:Class="PointOfSale.DailySheet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:wf="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="GhostWhite">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Label Content="Daily Schedule Reconciliation" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" FontWeight="Bold" FontSize="18" />
+
+            <WrapPanel Width="350"  Margin="150,0" Grid.Row="1">
+                <Label Content=" Instructor Name"  />
+                <ComboBox Name="cmbInstructorName" Width="200" Margin="2" SelectedValuePath="ID" DisplayMemberPath="FullName" SelectionChanged="cmbInstructorName_SelectionChanged" />
+            </WrapPanel>
+            <WrapPanel Margin="30,0,0,0" Grid.Row="1" >
+            <Label Content="Date" VerticalAlignment="Center" Width="50"  />
+            <DatePicker Name="dtpDate" Grid.Row="1" Width="120" SelectedDateChanged="dtpDate_SelectedDateChanged" />
+            </WrapPanel>
+        </Grid>
+       
+        <DataGrid  Grid.Row="1" Margin="20,10,10,10" Name="dtgData" AutoGenerateColumns="False" CanUserAddRows="False" Background="GhostWhite"  IsSynchronizedWithCurrentItem="False"  >
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="Background" Value="Red" />
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ScheduleInstructorID}" Value="0">
+                            <Setter Property="Background" Value="LightGray"/>
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Complete,NotifyOnSourceUpdated=True,Mode=TwoWay}"   Value="True">
+                            <Setter Property="Background" Value="LawnGreen"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding  Cancel,NotifyOnSourceUpdated=True}" Value="True">
+                            <Setter Property="Background" Value="LawnGreen"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding  NoShow,NotifyOnSourceUpdated=True}" Value="True">
+                            <Setter Property="Background" Value="LawnGreen"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Time" Width="*" Binding="{Binding Time }" />
+                <DataGridTextColumn Header="Student Name" Width="2*"  Binding="{Binding StudentName}"/>
+                <DataGridTextColumn Header="Activity" Width="1.5*"  Binding="{Binding BookingName}"/>
+                <DataGridTextColumn Header="ID"
+                                    Width="3*"
+                                    Binding="{Binding ScheduleInstructorID}"
+                                    Visibility="Collapsed" />
+
+                <!--<DataGridCheckBoxColumn>
+                    <DataGridCheckBoxColumn.CellStyle>
+                        <Style>
+                            <EventSetter Event="CheckBox.Checked"
+                                         Handler="OnChecked" />
+                        </Style>
+                    </DataGridCheckBoxColumn.CellStyle>
+                </DataGridCheckBoxColumn>-->
+                <DataGridTemplateColumn Header="Completed" Width=".5*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Name="chkComplete"  IsChecked="{Binding Complete,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Checked="chkComplete_Checked" Unchecked="chkComplete_Unchecked"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Cancelled" Width=".5*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Name="chkCancelled"  IsChecked="{Binding Cancel,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Checked="chkCancelled_Checked" Unchecked="chkCancelled_Unchecked"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Noshow" Width=".5*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Name="chkNoShow"  IsChecked="{Binding NoShow,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Checked="chkNoShow_Checked" Unchecked="chkNoShow_Unchecked"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Comment" Width="5*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Name="txtComment" TextChanged="txtComment_TextChanged"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="52*"/>
+                <ColumnDefinition Width="56*"/>
+                <ColumnDefinition Width="45*"/>
+                <ColumnDefinition Width="52*"/>
+                <ColumnDefinition Width="95*"/>
+            </Grid.ColumnDefinitions>
+           
+            <WrapPanel Grid.Column="4">
+                <Button Name="btnPrint" Grid.Column="3" Content="Print Schedule" HorizontalAlignment="Right" Margin="0,10,100,5" Width="85" Height="35" Click="btnPrint_Click"  />
+                <Button Name="btnSave"  Content="Save" HorizontalAlignment="Right" Margin="0,10,10,5" Width="85" Height="35" Click="btnSave_Click" />
+            </WrapPanel>
+            </Grid>
+
+        <xctk:WindowContainer   Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <xctk:ChildWindow Name="wndFilter" VerticalAlignment="Top"   WindowStartupLocation="Center"  IsModal="True" Top="50" Width="850" Height="450" Caption="SELECT DATES">
+                <Grid >
+                    <!--<Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>-->
+                    <WindowsFormsHost  Name="wfhMain" Padding="10">
+                        <wf:ReportViewer x:Name="rptViewer"/>
+                    </WindowsFormsHost>
+                </Grid>
+            </xctk:ChildWindow>
+        </xctk:WindowContainer>
+    </Grid>
+</UserControl>

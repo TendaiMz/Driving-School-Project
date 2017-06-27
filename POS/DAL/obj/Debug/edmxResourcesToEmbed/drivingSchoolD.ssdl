@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="drivingSchoolDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookingType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Colour">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Initials" Type="nvarchar" MaxLength="2" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdentityNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="PDLNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="Valid" Type="datetime" />
+    <Property Name="PhoneNumber1" Type="nvarchar" MaxLength="15" />
+    <Property Name="PhoneNumber2" Type="nvarchar" MaxLength="15" />
+    <Property Name="NextOfKin" Type="nvarchar" MaxLength="50" />
+    <Property Name="NextOfKinPhoneNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="Address" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustomerNumber" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DayTimeSlot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TimeSlot" Type="varchar" MaxLength="50" />
+    <Property Name="AffectedHourSlot1" Type="tinyint" />
+    <Property Name="AffectedHourSlot2" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="Fuel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="25" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="25" />
+    <Property Name="LicenceNumber" Type="varchar" MaxLength="25" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="15" />
+    <Property Name="Address" Type="varchar" MaxLength="150" />
+    <Property Name="DefensiveNo" Type="varchar" MaxLength="25" />
+    <Property Name="DefensiveExpiry" Type="datetime" />
+    <Property Name="Email" Type="varchar" MaxLength="25" />
+    <Property Name="Resigned" Type="bit" />
+    <Property Name="IDNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Vehicle" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="CashierID" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="InvoiceLineItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="InvoiceID" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitID" Type="int" />
+    <Property Name="Amount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Discount" Type="decimal" Precision="10" Scale="6" />
+  </EntityType>
+  <EntityType Name="LessonLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LessonTotalID" Type="int" />
+    <Property Name="LessonCount" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Maintenace">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="150" />
+    <Property Name="CarID" Type="tinyint" />
+    <Property Name="InstructorID" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="AmountPaid" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="tinyint" />
+    <Property Name="TypeID" Type="tinyint" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="MaintenaceType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Make">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MakeID" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="Operation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PaswordReset">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="tinyint" />
+    <Property Name="SupervisorID" Type="tinyint" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RoadTest_DayTimeSlot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DayTimeSlotID1" Type="tinyint" />
+    <Property Name="DayTimeSlotID2" Type="tinyint" />
+    <Property Name="RoadTestID" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="RoadTestTimeSlot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Time" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="SaleItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="SaleItemTypeID" Type="smallint" />
+  </EntityType>
+  <EntityType Name="SaleItemType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ScheduleInstructor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="InstructorID" Type="int" />
+    <Property Name="StudentID" Type="int" />
+    <Property Name="TimeSlotID" Type="int" />
+    <Property Name="BookingType" Type="smallint" />
+    <Property Name="Completed" Type="bit" />
+    <Property Name="Pending" Type="bit" />
+    <Property Name="Cancelled" Type="bit" />
+    <Property Name="NoShow" Type="bit" />
+    <Property Name="UserID" Type="tinyint" />
+    <Property Name="AffectedHourSlot" Type="tinyint" />
+    <Property Name="ScheduleCreatedBy" Type="tinyint" />
+    <Property Name="ScheduleReconsDoneBy" Type="tinyint" />
+    <Property Name="ReconsComment" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ScheduleItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+    <Property Name="Starting" Type="datetime" />
+    <Property Name="Ending" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="DriverID" Type="int" />
+    <Property Name="Completed" Type="bit" />
+    <Property Name="Pending" Type="bit" />
+    <Property Name="Cancelled" Type="bit" />
+  </EntityType>
+  <EntityType Name="TotalLessons">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="TotalLessons" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Units">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="15" />
+    <Property Name="Password" Type="nvarchar" MaxLength="10" />
+    <Property Name="UserType" Type="tinyint" />
+    <Property Name="ContactNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Activated" Type="bit" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="100" />
+    <Property Name="Salt" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VehicleRegistration" Type="nvarchar" MaxLength="50" />
+    <Property Name="Make" Type="tinyint" />
+    <Property Name="Model" Type="tinyint" />
+    <Property Name="ChasisNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="EngineNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Year" Type="datetime" />
+    <Property Name="Colour" Type="tinyint" />
+    <Property Name="Fuel" Type="tinyint" />
+    <Property Name="Milage" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Servicing" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="InsuranceExipry" Type="datetime" />
+    <Property Name="TankCapacity" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="VehicleType" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="VehicleFueling">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuelAmount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Price" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="InstructorID" Type="int" />
+    <Property Name="UserID" Type="tinyint" />
+    <Property Name="InvoiceNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Milage" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="VehicleID" Type="tinyint" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Notes" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="VehicleType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="drivingSchoolDBModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BookingType" EntityType="Self.BookingType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Colour" EntityType="Self.Colour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DayTimeSlot" EntityType="Self.DayTimeSlot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fuel" EntityType="Self.Fuel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instructor" EntityType="Self.Instructor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceLineItems" EntityType="Self.InvoiceLineItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LessonLog" EntityType="Self.LessonLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maintenace" EntityType="Self.Maintenace" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaintenaceType" EntityType="Self.MaintenaceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Make" EntityType="Self.Make" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Operation" EntityType="Self.Operation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaswordReset" EntityType="Self.PaswordReset" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoadTest_DayTimeSlot" EntityType="Self.RoadTest_DayTimeSlot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoadTestTimeSlot" EntityType="Self.RoadTestTimeSlot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaleItems" EntityType="Self.SaleItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaleItemType" EntityType="Self.SaleItemType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScheduleInstructor" EntityType="Self.ScheduleInstructor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScheduleItems" EntityType="Self.ScheduleItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TotalLessons" EntityType="Self.TotalLessons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Units" EntityType="Self.Units" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehicle" EntityType="Self.Vehicle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleFueling" EntityType="Self.VehicleFueling" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleType" EntityType="Self.VehicleType" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

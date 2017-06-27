@@ -1,0 +1,11 @@
+﻿<Window x:Class="PointOfSale.DaySheetRprt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+        Title="DaySheetRprt" Height="300" Width="300">
+    <Grid>
+        <WindowsFormsHost Name="wfhMain" Loaded="wfhMain_Loaded" >
+            <wf:ReportViewer x:Name="rptViewer"/>
+        </WindowsFormsHost>
+    </Grid>
+</Window>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a1a303b53da0453eb9dabafd69a30873" Name="Diagram1">
+        <EntityTypeShape EntityType="drivingSchoolDBModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.BookingType" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Colour" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Customer" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.DayTimeSlot" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Fuel" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Instructor" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Invoice" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.InvoiceLineItem" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.LessonLog" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Maintenace" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.MaintenaceType" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Make" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Model" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Operation" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.PaswordReset" Width="1.5" PointX="8.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.RoadTest_DayTimeSlot" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.RoadTestTimeSlot" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.SaleItem" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.SaleItemType" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.ScheduleInstructor" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.ScheduleItem" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.TotalLesson" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Unit" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.User" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.UserType" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.Vehicle" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.VehicleFueling" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.VehicleType" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.vwInstructorGeneratedIncome" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.vwInstuctorFuelCost" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.vwLessonsCompletedByInstuctor" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="drivingSchoolDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="drivingSchoolDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="drivingSchoolDBModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.SummarisedIncomeFlow" Width="1.5" PointX="15.75" PointY="16.75" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.vwCompletedLessons_Income" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.vwCompletedTest_Income" Width="1.5" PointX="2.75" PointY="17.75" />
+        <EntityTypeShape EntityType="drivingSchoolDBModel.vwMaintenanceCost" Width="1.5" PointX="17.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,160 @@
+﻿<RibbonWindow x:Class="PointOfSale.MainWindow"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:r="clr-namespace:System.Windows.Controls.Ribbon.Primitives;assembly=System.Windows.Controls.Ribbon"
+              Title="POS"
+              Height="350"
+              Width="525"
+              WindowState="Maximized"
+              Closing="RibbonWindow_Closing">
+    <DockPanel Name="dckMainPanel">
+        <Ribbon   DockPanel.Dock="Top">
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu>
+                    <RibbonApplicationMenuItem Name="btnExit"
+                                               Header="Exit"
+                                               ImageSource="Icons\quit.png"
+                                               Click="btnExit_Click" />
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+
+            <RibbonTab Header="    Sales  "
+                       Margin="20,0,0,0">
+                <RibbonGroup Header="Sales Details">
+                    <Image Source="Icons\cashier.png" />
+                    <RibbonButton Name="btnNewSale"
+                                  Label="New Sale"
+                                  LargeImageSource="Icons\sale.png"
+                                  Click="btnNewSale_Click" />
+                    <RibbonButton Name="btnSaleData"
+                                  Label="View"
+                                  LargeImageSource="Icons\read.png"
+                                  Click="btnSaleData_Click" />
+
+                </RibbonGroup>
+                <RibbonGroup Header=" Customer Details">
+                    <Image Source="Icons\clerk.png" />
+                    <RibbonButton Name="btnEditCustomer"
+                                  Label="Edit"
+                                  LargeImageSource="Icons\clerk.png"
+                                  Click="btnEditCustomer_Click" />
+                    <RibbonButton Name="btnViewCustomer"
+                                  Label="View"
+                                  LargeImageSource="Icons\read.png"
+                                  Click="btnViewCustomer_Click" />
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="    Day Activities  "
+                       Margin="20,0,0,0">
+                <RibbonGroup Header="Vehicles">
+                    <RibbonButton Name="btnMaintenace"
+                                  Label="Maintenance"
+                                  LargeImageSource="Icons\maintenance.png"
+                                  Click="btnMaintenace_Click" />
+                    <RibbonButton Name="btnFueling"
+                                  Label="Fueling"
+                                  LargeImageSource="Icons\station.png"
+                                  Click="btnFueling_Click" />
+                </RibbonGroup>
+
+                <RibbonGroup Header="Sales">
+                   
+                    <RibbonButton Name="btnCashUp"
+                                  Label="Cash Up"
+                                  LargeImageSource="Icons\coins.png"
+                                  Click="btnCashUp_Click" />
+                    
+                    <RibbonButton Name="btnCancelSale"
+                                  Label="Cancel Sale"
+                                  LargeImageSource="Icons\delete-icon.png"
+                                  Click="btnCancelSale_Click" />
+
+
+                </RibbonGroup>
+               
+                <RibbonGroup Header="Scheduling">
+                    <RibbonButton Name="btnStudentSchedule"
+                                  Label="Student Schedule"
+                                  LargeImageSource="Icons\businessman.png"
+                                  Click="btnStudentSchedule_Click" />
+                    <RibbonButton Name="btnInstructorSchedule"
+                                  Label="Instructor Schedule"
+                                  LargeImageSource="Icons\shedule.png"
+                                  Click="btnInstructorSchedule_Click" />
+                    <RibbonButton Name="btnScheduleRec"
+                                  Label="Schedule Rec"
+                                  LargeImageSource="Icons\calendar.png"
+                                  Click="btnScheduleRec_Click" />       
+              </RibbonGroup>
+                <RibbonGroup Header="Reports">
+                    <RibbonButton Name="btnReporting"
+                                  Label="Fueling Report"
+                                  LargeImageSource="Icons\newspaper.png"
+                                  Click="btnReporting_Click" />
+                    <RibbonButton Name="btnCashFlow"
+                                  Label="Instructor Income Flow"
+                                  LargeImageSource="Icons\analytics.png"
+                                  Click="btnCashFlow_Click" />
+                    <RibbonButton Name="btnIncomeExpenditure"
+                                  Label="Detailed Income &amp; Expenditure"
+                                  LargeImageSource="Icons\report1.png"
+                                  Click="btnIncomeExpenditure_Click" />
+                    <!--<RibbonButton Name="btnDetailedMonthly"
+                                  Label="Detailed Monthly Reporting"
+                                  LargeImageSource="Icons\report1.ico"
+                                  Click="btnDetailedMonthly_Click" />-->
+                </RibbonGroup>
+
+
+
+            </RibbonTab >
+            <RibbonTab Header="Settings">
+                <RibbonGroup  Header="Car Profile">
+                    <Image Source="Icons\sports-car.png" />
+                    <RibbonButton Label="Create"
+                                  LargeImageSource="Icons\tag.png"
+                                  Click="RibbonButton_Click" />
+                    <RibbonButton Name="btnEditVehicle"
+                                  Label="Edit"
+                                  LargeImageSource="Icons\editor.png"
+                                  Click="btnEditVehicle_Click" />
+                    <!--<RibbonButton Label="View" LargeImageSource="Icons\read.png"/>-->
+                </RibbonGroup>
+                <RibbonGroup  Header="Instructor Profile">
+                    <Image Source="Icons\driver.png" />
+                    <RibbonButton Name="btnManageInstructor"
+                                  Label="Manage Instructor"
+                                  LargeImageSource="Icons\user.png"
+                                  Click="btnManageInstructor_Click" />
+                    <!--<RibbonButton Label="Edit" LargeImageSource="Icons\editor.png"/>
+                    <RibbonButton Label="View" LargeImageSource="Icons\read.png"/>-->
+                </RibbonGroup>
+                <RibbonGroup  Header="User Profile">
+                    <Image Source="Icons\users.png" />
+                    <RibbonButton Name="btnManageUsers"
+                                  Label="Manage Users"
+                                  LargeImageSource="Icons\management_001.png"
+                                  Click="btnManageUsers_Click" />
+                </RibbonGroup>
+
+            </RibbonTab>
+
+        </Ribbon>
+
+        <Grid Name="grdMain"
+              DockPanel.Dock="Bottom">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+            </Grid>
+            <Image Grid.Row="0"
+                   Source="Icons\pos_logo.ico" />
+            
+            
+            
+            
+        </Grid>
+    </DockPanel>
+</RibbonWindow>

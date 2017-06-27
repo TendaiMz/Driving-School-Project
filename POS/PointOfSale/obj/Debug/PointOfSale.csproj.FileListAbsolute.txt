@@ -1,0 +1,404 @@
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\PointOfSale.exe.config
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale.exe
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale.pdb
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Report\FuelUsage.rdlc
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Report\InstructorCashFlowRprt.rdlc
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Report\InstructorDaySheet.rdlc
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Report\CashUpRprt.rdlc
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Report\DetailedSalesRpt.rdlc
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Icons\Rosepet.jpg
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\PointOfSale.exe.manifest
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\PointOfSale.application
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\PointOfSale.exe
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\PointOfSale.pdb
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\BCrypt.Net.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\BUL.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\DAL.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\EntityFramework.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\BUL.pdb
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\DAL.pdb
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\BCrypt.Net.pdb
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\BCrypt.Net.xml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\EntityFramework.xml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale.csprojResolveAssemblyReference.cache
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\CashUp.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\DailySheet.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\DaySheetRprt.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\DetailedSales.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\EditVehicle.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\Fueling.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\InstructorCashFlow.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\InstructorDetails.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\InstructorSchedule.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\LogIn.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\MaintenanceCard.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\MainWindow.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\NewCustomer.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\NewSaler.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PrintCustomerInvoice.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PrintReceipt.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\Product.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\StudentSchedule.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\SummarisedIncomeExpenditure.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\SystemUser.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\test.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\VehicleCard.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\ViewCustomer.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\CashUp.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\DailySheet.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\DaySheetRprt.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\DetailedSales.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\EditVehicle.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\Fueling.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\FuelUsageReporting.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\InstructorCashFlow.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\InstructorDetails.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\InstructorSchedule.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\LogIn.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\MaintenanceCard.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\MainWindow.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\NewCustomer.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\NewSaler.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PrintCustomerInvoice.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PrintReceipt.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\Product.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\StudentSchedule.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\SummarisedIncomeExpenditure.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\SystemUser.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\test.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\VehicleCard.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\ViewCustomer.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\App.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale_Content.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale_MarkupCompile.cache
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale_MarkupCompile.lref
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\FuelUsageReporting.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\Themes\Generic.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale.g.resources
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale.Properties.Resources.resources
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale.csproj.GenerateResource.Cache
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\RdlCompile.cache
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\RdlCompile.compiled
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale.exe.manifest
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\PointOfSale.application
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Report\SummarisedIncomeExpenditure.rdlc
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\DetailedMonthlyReport.baml
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\obj\Debug\DetailedMonthlyReport.g.cs
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Report\DetailedMonthly.rdlc
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Users\TENDAI\Documents\Visual Studio 2013\Projects\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.csprojResolveAssemblyReference.cache
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\CashUp.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DailySheet.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DaySheetRprt.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DetailedMonthlyReport.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DetailedSales.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\EditVehicle.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Fueling.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorCashFlow.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorDetails.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorSchedule.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\LogIn.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\MaintenanceCard.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\MainWindow.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\NewCustomer.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\NewSaler.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PrintCustomerInvoice.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PrintReceipt.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Product.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\StudentSchedule.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\SummarisedIncomeExpenditure.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\SystemUser.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\test.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\VehicleCard.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\ViewCustomer.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\CashUp.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DailySheet.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DaySheetRprt.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DetailedMonthlyReport.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DetailedSales.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\EditVehicle.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Fueling.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\FuelUsageReporting.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorCashFlow.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorDetails.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorSchedule.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\LogIn.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\MaintenanceCard.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\MainWindow.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\NewCustomer.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\NewSaler.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PrintCustomerInvoice.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PrintReceipt.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Product.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\StudentSchedule.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\SummarisedIncomeExpenditure.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\SystemUser.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\test.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\VehicleCard.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\ViewCustomer.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\App.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale_Content.g.cs
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale_MarkupCompile.cache
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale_MarkupCompile.lref
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\FuelUsageReporting.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Themes\Generic.baml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.g.resources
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.Properties.Resources.resources
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.csproj.GenerateResource.Cache
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\RdlCompile.cache
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\RdlCompile.compiled
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.pdb
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\FuelUsage.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\InstructorCashFlowRprt.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\SummarisedIncomeExpenditure.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\DetailedMonthly.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\DetailedIncomeFlow.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\Fueling.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\InstructorDaySheet.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\CashUpRprt.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\DetailedSalesRpt.rdlc
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Icons\Rosepet.jpg
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.exe.config
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.exe.manifest
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.application
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.exe
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.pdb
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BCrypt.Net.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BUL.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\DAL.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\EntityFramework.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BUL.pdb
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\DAL.pdb
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BCrypt.Net.pdb
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BCrypt.Net.xml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\EntityFramework.xml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.exe.manifest
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.application
+C:\Users\TENDAI\Source\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.exe
+C:\Projects\Repos\POINT OF SALE\PointOfSale\bin\Debug\PointOfSale.exe.config
+C:\Projects\Repos\POINT OF SALE\PointOfSale\obj\Debug\PointOfSale.exe
+C:\Projects\Repos\POINT OF SALE\PointOfSale\obj\Debug\PointOfSale.pdb
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\FuelUsage.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\InstructorCashFlowRprt.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\SummarisedIncomeExpenditure.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\DetailedMonthly.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\DetailedIncomeFlow.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\Fueling.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\InstructorDaySheet.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\CashUpRprt.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Report\DetailedSalesRpt.rdlc
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Icons\Rosepet.jpg
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.exe.config
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.exe.manifest
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.application
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.exe
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\PointOfSale.pdb
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BCrypt.Net.dll
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BUL.dll
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\DAL.dll
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\EntityFramework.dll
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BUL.pdb
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\DAL.pdb
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BCrypt.Net.pdb
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\BCrypt.Net.xml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\EntityFramework.xml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.csprojResolveAssemblyReference.cache
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\CashUp.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DailySheet.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DaySheetRprt.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DetailedMonthlyReport.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DetailedSales.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\EditVehicle.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Fueling.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorCashFlow.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorDetails.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorSchedule.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\LogIn.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\MaintenanceCard.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\MainWindow.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\NewCustomer.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\NewSaler.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PrintCustomerInvoice.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PrintReceipt.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Product.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\StudentSchedule.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\SummarisedIncomeExpenditure.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\SystemUser.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\test.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\VehicleCard.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\ViewCustomer.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\CancelSale.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\CashUp.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DailySheet.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DaySheetRprt.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DetailedMonthlyReport.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\DetailedSales.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\EditVehicle.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Fueling.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\FuelUsageReporting.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorCashFlow.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorDetails.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\InstructorSchedule.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\LogIn.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\MaintenanceCard.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\MainWindow.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\NewCustomer.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\NewSaler.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PrintCustomerInvoice.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PrintReceipt.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Product.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\StudentSchedule.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\SummarisedIncomeExpenditure.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\SystemUser.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\test.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\VehicleCard.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\ViewCustomer.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\App.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale_Content.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale_MarkupCompile.cache
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale_MarkupCompile.lref
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\CancelSale.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\FuelUsageReporting.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\Themes\Generic.baml
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.g.resources
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.Properties.Resources.resources
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.csproj.GenerateResource.Cache
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\RdlCompile.cache
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\RdlCompile.compiled
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.exe.manifest
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.application
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.exe
+C:\Projects\Repos\POINT OF SALE\POS\PointOfSale\obj\Debug\PointOfSale.pdb
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\PointOfSale.exe.config
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale.exe
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale.pdb
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\FuelUsage.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\InstructorCashFlowRprt.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\SummarisedIncomeExpenditure.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\DetailedMonthly.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\DetailedIncomeFlow.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\Fueling.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\InstructorDaySheet.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\CashUpRprt.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Report\DetailedSalesRpt.rdlc
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Icons\Rosepet.jpg
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\PointOfSale.exe.manifest
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\PointOfSale.application
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\PointOfSale.exe
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\PointOfSale.pdb
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\BCrypt.Net.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\BUL.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\DAL.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\EntityFramework.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfCellGrid.WPF.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfGridCommon.WPF.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfRadialMenu.Wpf.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfSchedule.WPF.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfSpreadsheet.WPF.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.Shared.Wpf.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.Tools.Wpf.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.XlsIO.Base.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfShared.Wpf.dll
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\BUL.pdb
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\DAL.pdb
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\BCrypt.Net.pdb
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\BCrypt.Net.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\EntityFramework.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfCellGrid.WPF.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfGridCommon.WPF.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfRadialMenu.Wpf.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfSchedule.WPF.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfSpreadsheet.WPF.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.Shared.Wpf.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.Tools.Wpf.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.XlsIO.Base.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\bin\Debug\Syncfusion.SfShared.Wpf.xml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale.csprojResolveAssemblyReference.cache
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\CashUp.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\DailySheet.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\DaySheetRprt.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\DetailedMonthlyReport.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\DetailedSales.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\EditVehicle.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\Fueling.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\InstructorCashFlow.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\InstructorDetails.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\InstructorSchedule.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\LogIn.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\MaintenanceCard.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\MainWindow.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\NewCustomer.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\NewSaler.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PrintCustomerInvoice.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PrintReceipt.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\Product.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\StudentSchedule.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\SummarisedIncomeExpenditure.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\SystemUser.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\test.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\VehicleCard.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\ViewCustomer.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\CancelSale.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\CashUp.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\DailySheet.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\DaySheetRprt.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\DetailedMonthlyReport.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\DetailedSales.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\EditVehicle.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\Fueling.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\FuelUsageReporting.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\InstructorCashFlow.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\InstructorDetails.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\InstructorSchedule.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\LogIn.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\MaintenanceCard.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\MainWindow.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\NewCustomer.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\NewSaler.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PrintCustomerInvoice.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PrintReceipt.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\Product.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\StudentSchedule.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\SummarisedIncomeExpenditure.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\SystemUser.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\test.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\VehicleCard.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\ViewCustomer.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\App.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale_Content.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale_MarkupCompile.cache
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale_MarkupCompile.lref
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\CancelSale.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\FuelUsageReporting.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\Themes\Generic.baml
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale.g.resources
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale.Properties.Resources.resources
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale.csproj.GenerateResource.Cache
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\RdlCompile.cache
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\RdlCompile.compiled
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale.exe.manifest
+C:\Projects\Repos\Driving-School-Project\POS\PointOfSale\obj\Debug\PointOfSale.application

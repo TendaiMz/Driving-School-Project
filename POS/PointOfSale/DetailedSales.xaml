@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="PointOfSale.DetailedSales"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:wf="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".45*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width=".45*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <WindowsFormsHost Grid.Column="1"
+                          Name="frmHost"
+                          Visibility="Collapsed">
+            <wf:ReportViewer x:Name="rptViewer" />
+        </WindowsFormsHost>
+        <xctk:WindowContainer   Grid.ColumnSpan="3"
+                                Grid.RowSpan="2">
+            <xctk:ChildWindow Name="wndFilter"
+                              VerticalAlignment="Top"
+                              WindowStartupLocation="Center"
+                              IsModal="True"
+                              Top="50"
+                              Width="250"
+                              Height="150"
+                              Caption="SELECT DATES">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition Height="1.5*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0"
+                           Grid.Row="0"
+                           Content="Start Date"
+                           VerticalAlignment="Center" />
+                    <Label Grid.Column="0"
+                           Grid.Row="1"
+                           Content="End Date"
+                           VerticalAlignment="Center" />
+                    <DatePicker Name="dtpStart"
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                VerticalAlignment="Center" />
+                    <DatePicker Name="dtpEnd"
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                VerticalAlignment="Center" />
+                    <Button Name="btnSubmit"
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            Height="30"
+                            Width="75"
+                            Content="Submit"
+                            VerticalAlignment="Center"
+                            Click="btnSubmit_Click" />
+                    <ComboBox x:Name="cmbCashierID"
+                              SelectionChanged="cmbCashierID_SelectionChanged"
+                              DisplayMemberPath="FullName"
+                              SelectedValuePath="ID"
+                               VerticalAlignment="Center"
+                               Grid.Column="1"
+                               Grid.Row="2" />
+                    <Label x:Name="lblCashier"
+                           Content="Cashier"
+                           Grid.Row="2" 
+                           VerticalAlignment="Center"
+                           />
+                </Grid>
+            </xctk:ChildWindow>
+        </xctk:WindowContainer>
+    </Grid>
+</UserControl>
